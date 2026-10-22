@@ -1,0 +1,13 @@
+{
+  "name": "Calendario Food & Wine Communication",
+  "short_name": "Master F&W",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#F6F3F2",
+  "theme_color": "#4A0F22",
+  "icons": [
+    {"src": "icona-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable"},
+    {"src": "icona-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable"}
+  ]
+}
