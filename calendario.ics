@@ -1,0 +1,389 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Master Food and Wine Communication//Calendario//IT
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Master Food & Wine Communication
+X-WR-TIMEZONE:Europe/Rome
+REFRESH-INTERVAL;VALUE=DURATION:PT6H
+X-PUBLISHED-TTL:PT6H
+BEGIN:VTIMEZONE
+TZID:Europe/Rome
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:fw-20261019-1000@master-food-wine
+DTSTAMP:20261030T160422Z
+DTSTART;TZID=Europe/Rome:20261019T100000
+DTEND;TZID=Europe/Rome:20261019T133000
+SUMMARY:Apertura del master ed evento Food Talks
+DESCRIPTION:Presentazione\, ice breaking e team building · Evento\nCon: V
+ incenzo Russo\, Maurizio Trezzi\, Gabriele Zanatta\, Maria Novella Valent
+ i\, Carla Icardi\, Marco Muggiano\, Marco Sutter\, Gesualdo Vercio\, Fabi
+ ola Fiorentino\, Marina Potassa\, Tiziana Formisano\, Beatrice Reggiani
+LOCATION:Aula Seminari (Edificio IULM 1\, 6° piano)
+END:VEVENT
+BEGIN:VEVENT
+UID:fw-20261019-1430@master-food-wine
+DTSTAMP:20261030T160422Z
+DTSTART;TZID=Europe/Rome:20261019T143000
+DTEND;TZID=Europe/Rome:20261019T183000
+SUMMARY:Introduzione generale e presentazione degli studenti
+DESCRIPTION:Presentazione\, ice breaking e team building · Lezione\nCon: 
+ Vincenzo Russo
+LOCATION:Aula 412 (Edificio IULM 4\, 1° piano)
+END:VEVENT
+BEGIN:VEVENT
+UID:fw-20261020-0930@master-food-wine
+DTSTAMP:20261030T160422Z
+DTSTART;TZID=Europe/Rome:20261020T093000
+DTEND;TZID=Europe/Rome:20261020T133000
+SUMMARY:Ice breaking
+DESCRIPTION:Presentazione\, ice breaking e team building · Workshop\nCon:
+  Massimo Bustreo
+LOCATION:The Bridge (Edificio IULM 6\, 1° piano)
+END:VEVENT
+BEGIN:VEVENT
+UID:fw-20261020-1430@master-food-wine
+DTSTAMP:20261030T160422Z
+DTSTART;TZID=Europe/Rome:20261020T143000
+DTEND;TZID=Europe/Rome:20261020T183000
+SUMMARY:Ice breaking
+DESCRIPTION:Presentazione\, ice breaking e team building · Workshop\nCon:
+  Massimo Bustreo
+LOCATION:The Bridge (Edificio IULM 6\, 1° piano)
+END:VEVENT
+BEGIN:VEVENT
+UID:fw-20261021-0930@master-food-wine
+DTSTAMP:20261030T160422Z
+DTSTART;TZID=Europe/Rome:20261021T093000
+DTEND;TZID=Europe/Rome:20261021T133000
+SUMMARY:Introduzione alla comunicazione del food and wine e neuroscienze
+DESCRIPTION:Presentazione\, ice breaking e team building · Lezione\nCon: 
+ Vincenzo Russo
+LOCATION:Aula 412 (Edificio IULM 4\, 1° piano)
+END:VEVENT
+BEGIN:VEVENT
+UID:fw-20261021-1430@master-food-wine
+DTSTAMP:20261030T160422Z
+DTSTART;TZID=Europe/Rome:20261021T143000
+DTEND;TZID=Europe/Rome:20261021T173000
+SUMMARY:Introduzione al Marketing del Food e lancio del progetto Designing
+  your first marketing plan
+DESCRIPTION:Presentazione\, ice breaking e team building · Lezione\nCon: 
+ Massimiliano Freddi
+LOCATION:Aula 412 (Edificio IULM 4\, 1° piano)
+END:VEVENT
+BEGIN:VEVENT
+UID:fw-20261022-0930@master-food-wine
+DTSTAMP:20261030T160422Z
+DTSTART;TZID=Europe/Rome:20261022T093000
+DTEND;TZID=Europe/Rome:20261022T133000
+SUMMARY:Il sistema agro-alimentare\, i distretti agroalimentari e i networ
+ k territoriali (consorzi\, associazioni\, ed altre organizzazioni territo
+ riali)
+DESCRIPTION:Il sistema enogastronomico ed agroalimentare · Lezione\nCon: 
+ Alessandro Franceschini
+LOCATION:Aula 412 (Edificio IULM 4\, 1° piano)
+END:VEVENT
+BEGIN:VEVENT
+UID:fw-20261022-1430@master-food-wine
+DTSTAMP:20261030T160422Z
+DTSTART;TZID=Europe/Rome:20261022T143000
+DTEND;TZID=Europe/Rome:20261022T183000
+SUMMARY:Il sistema agro-alimentare\, i distretti agroalimentari e i networ
+ k territoriali (consorzi\, associazioni\, ed altre organizzazioni territo
+ riali)
+DESCRIPTION:Il sistema enogastronomico ed agroalimentare · Lezione\nCon: 
+ Alessandro Franceschini
+LOCATION:Aula 412 (Edificio IULM 4\, 1° piano)
+END:VEVENT
+BEGIN:VEVENT
+UID:fw-20261023-0930@master-food-wine
+DTSTAMP:20261030T160422Z
+DTSTART;TZID=Europe/Rome:20261023T093000
+DTEND;TZID=Europe/Rome:20261023T133000
+SUMMARY:Le dinamiche del mercato dei prodotti alimentari e relativi effett
+ i sui consumi e sul comportamento del consumatore
+DESCRIPTION:Il sistema enogastronomico ed agroalimentare · Lezione\nCon: 
+ Alessandro Franceschini
+LOCATION:Aula 412 (Edificio IULM 4\, 1° piano)
+END:VEVENT
+BEGIN:VEVENT
+UID:fw-20261023-1430@master-food-wine
+DTSTAMP:20261030T160422Z
+DTSTART;TZID=Europe/Rome:20261023T143000
+DTEND;TZID=Europe/Rome:20261023T200000
+SUMMARY:Champagne Forum
+DESCRIPTION:Il sistema enogastronomico ed agroalimentare · Evento\nCon: A
+ grapart Avize\, Barons de Rothschild\, Boizel\, Bollinger\, Delamotte\, D
+ rappier\, Duval-Leroy\, Henriot\, Joseph Perrier\, Laurent-Perrier\, Lecl
+ erc Briant\, Louis Roederer\, Moët & Chandon\, Perrier-Jouët\, Philippo
+ nnat\, Piper-Heidsieck\, Pol Roger\, Ruinart\, Taittinger\, Veuve Clicquo
+ t
+LOCATION:Auditorium (Edificio IULM 6\, Piano terra)
+END:VEVENT
+BEGIN:VEVENT
+UID:fw-20261026-0930@master-food-wine
+DTSTAMP:20261030T160422Z
+DTSTART;TZID=Europe/Rome:20261026T093000
+DTEND;TZID=Europe/Rome:20261026T133000
+SUMMARY:Come lavora un'agenzia con Wabisabi Studio + Divisione in agenzie 
+ + BRIEF 1° PW "nome\,logo\, payoff"
+DESCRIPTION:Il sistema enogastronomico ed agroalimentare · Project work\n
+ Con: Wabisabi Studio\nCon lo staff del master
+LOCATION:Aula 412 (Edificio IULM 4\, 1° piano)
+END:VEVENT
+BEGIN:VEVENT
+UID:fw-20261026-1430@master-food-wine
+DTSTAMP:20261030T160422Z
+DTSTART;TZID=Europe/Rome:20261026T143000
+DTEND;TZID=Europe/Rome:20261026T183000
+SUMMARY:Il sistema agroalimentare: il mondo del biologico\, i nuovi trend 
+ e gli e-commerce del food
+DESCRIPTION:Il sistema enogastronomico ed agroalimentare · Lezione\nCon: 
+ Alessandro Franceschini
+LOCATION:Aula 412 (Edificio IULM 4\, 1° piano)
+END:VEVENT
+BEGIN:VEVENT
+UID:fw-20261027-0930@master-food-wine
+DTSTAMP:20261030T160422Z
+DTSTART;TZID=Europe/Rome:20261027T093000
+DTEND;TZID=Europe/Rome:20261027T133000
+SUMMARY:Il sistema agroalimentare: il mondo del biologico\, i nuovi trend 
+ e gli e-commerce del food
+DESCRIPTION:Il sistema enogastronomico ed agroalimentare · Lezione\nCon: 
+ Alessandro Franceschini
+LOCATION:Aula 412 (Edificio IULM 4\, 1° piano)
+END:VEVENT
+BEGIN:VEVENT
+UID:fw-20261027-1430@master-food-wine
+DTSTAMP:20261030T160422Z
+DTSTART;TZID=Europe/Rome:20261027T143000
+DTEND;TZID=Europe/Rome:20261027T183000
+SUMMARY:Introduzione al sistema agroalimentare attraverso i principi di st
+ oria della gastronomia e i nuovi confini del gusto
+DESCRIPTION:Il sistema enogastronomico ed agroalimentare · Lezione\nCon: 
+ Gabriele Zanatta
+LOCATION:Aula 412 (Edificio IULM 4\, 1° piano)
+END:VEVENT
+BEGIN:VEVENT
+UID:fw-20261028-0930@master-food-wine
+DTSTAMP:20261030T160422Z
+DTSTART;TZID=Europe/Rome:20261028T093000
+DTEND;TZID=Europe/Rome:20261028T133000
+SUMMARY:lavoro in aula
+DESCRIPTION:Il sistema enogastronomico ed agroalimentare · Project work\n
+ Con lo staff del master
+LOCATION:Aula 412 (Edificio IULM 4\, 1° piano)
+END:VEVENT
+BEGIN:VEVENT
+UID:fw-20261028-1430@master-food-wine
+DTSTAMP:20261030T160422Z
+DTSTART;TZID=Europe/Rome:20261028T143000
+DTEND;TZID=Europe/Rome:20261028T183000
+SUMMARY:Cultura del Team e Comunicazione interna
+DESCRIPTION:Il sistema enogastronomico ed agroalimentare · Lezione\nCon: 
+ Stefano Cozzi
+LOCATION:Aula 412 (Edificio IULM 4\, 1° piano)
+END:VEVENT
+BEGIN:VEVENT
+UID:fw-20261029-0930@master-food-wine
+DTSTAMP:20261030T160422Z
+DTSTART;TZID=Europe/Rome:20261029T093000
+DTEND;TZID=Europe/Rome:20261029T133000
+SUMMARY:Il sistema agroalimentare: il mondo del biologico\, i nuovi trend 
+ e gli e-commerce del food
+DESCRIPTION:Il sistema enogastronomico ed agroalimentare · Testimonianza\
+ nCon: Alessandro Franceschini\, Lorenzo Cafissi
+LOCATION:Aula 412 (Edificio IULM 4\, 1° piano)
+END:VEVENT
+BEGIN:VEVENT
+UID:fw-20261029-1430@master-food-wine
+DTSTAMP:20261030T160422Z
+DTSTART;TZID=Europe/Rome:20261029T143000
+DTEND;TZID=Europe/Rome:20261029T183000
+SUMMARY:Introduzione al sistema agroalimentare attraverso i principi di st
+ oria della gastronomia e i nuovi confini del gusto
+DESCRIPTION:Il sistema enogastronomico ed agroalimentare · Lezione\nCon: 
+ Gabriele Zanatta
+LOCATION:Aula 412 (Edificio IULM 4\, 1° piano)
+END:VEVENT
+BEGIN:VEVENT
+UID:fw-20261102-0930@master-food-wine
+DTSTAMP:20261030T160422Z
+DTSTART;TZID=Europe/Rome:20261102T093000
+DTEND;TZID=Europe/Rome:20261102T133000
+SUMMARY:Il sistema agroalimentare: Il mercato del Dop\, IGP\, STG\, prodot
+ ti tradizionali e tipici
+DESCRIPTION:Il sistema enogastronomico ed agroalimentare · Lezione\nCon: 
+ Alessandro Franceschini
+LOCATION:Aula 412 (Edificio IULM 4\, 1° piano)
+END:VEVENT
+BEGIN:VEVENT
+UID:fw-20261102-1430@master-food-wine
+DTSTAMP:20261030T160422Z
+DTSTART;TZID=Europe/Rome:20261102T143000
+DTEND;TZID=Europe/Rome:20261102T183000
+SUMMARY:Mangio dunque penso: fondamenti di antropologia del cibo e del vin
+ o
+DESCRIPTION:Il sistema enogastronomico ed agroalimentare · Lezione\nCon: 
+ Franco Achilli
+LOCATION:Aula 412 (Edificio IULM 4\, 1° piano)
+END:VEVENT
+BEGIN:VEVENT
+UID:fw-20261103-0930@master-food-wine
+DTSTAMP:20261030T160422Z
+DTSTART;TZID=Europe/Rome:20261103T093000
+DTEND;TZID=Europe/Rome:20261103T133000
+SUMMARY:Il sistema agroalimentare: Il rapporto tra produzione e ristorazio
+ ne di qualità: strategie di sviluppo
+DESCRIPTION:Il sistema enogastronomico ed agroalimentare · Lezione\nCon: 
+ Alessandro Franceschini\, Luca Cuzziol\, Silvano Brescianini
+LOCATION:Aula 412 (Edificio IULM 4\, 1° piano)
+END:VEVENT
+BEGIN:VEVENT
+UID:fw-20261103-1430@master-food-wine
+DTSTAMP:20261030T160422Z
+DTSTART;TZID=Europe/Rome:20261103T143000
+DTEND;TZID=Europe/Rome:20261103T183000
+SUMMARY:Feedback progetto individuale + BRIEF 2° PW di gruppo
+DESCRIPTION:Il sistema enogastronomico ed agroalimentare · Project work\n
+ Con: Massimiliano Freddi
+LOCATION:Aula 412 (Edificio IULM 4\, 1° piano)
+END:VEVENT
+BEGIN:VEVENT
+UID:fw-20261104-0900@master-food-wine
+DTSTAMP:20261030T160422Z
+DTSTART;TZID=Europe/Rome:20261104T090000
+DTEND;TZID=Europe/Rome:20261104T133000
+SUMMARY:Lavoro sul progetto di gruppo
+DESCRIPTION:Il sistema enogastronomico ed agroalimentare · Project work\n
+ Con: Massimiliano Freddi
+LOCATION:Aula 412 (Edificio IULM 4\, 1° piano)
+END:VEVENT
+BEGIN:VEVENT
+UID:fw-20261104-1430@master-food-wine
+DTSTAMP:20261030T160422Z
+DTSTART;TZID=Europe/Rome:20261104T143000
+DTEND;TZID=Europe/Rome:20261104T183000
+SUMMARY:Lavoro sul progetto di gruppo
+DESCRIPTION:Il sistema enogastronomico ed agroalimentare · Project work\n
+ Con: Massimiliano Freddi
+LOCATION:Aula 412 (Edificio IULM 4\, 1° piano)
+END:VEVENT
+BEGIN:VEVENT
+UID:fw-20261105-0930@master-food-wine
+DTSTAMP:20261030T160422Z
+DTSTART;TZID=Europe/Rome:20261105T093000
+DTEND;TZID=Europe/Rome:20261105T133000
+SUMMARY:Check delle agenzie sul 1° project work
+DESCRIPTION:Storia della gastronomia · Project work\nCon lo staff del mas
+ ter
+LOCATION:Aula 412 (Edificio IULM 4\, 1° piano)
+END:VEVENT
+BEGIN:VEVENT
+UID:fw-20261105-1430@master-food-wine
+DTSTAMP:20261030T160422Z
+DTSTART;TZID=Europe/Rome:20261105T143000
+DTEND;TZID=Europe/Rome:20261105T183000
+SUMMARY:Il sistema della ristorazione attraverso l'esperienza di SAMPA
+DESCRIPTION:Storia della gastronomia · Lezione\nCon: Enrico Vignoli
+LOCATION:Aula 412 (Edificio IULM 4\, 1° piano)
+END:VEVENT
+BEGIN:VEVENT
+UID:fw-20261109-0930@master-food-wine
+DTSTAMP:20261030T160422Z
+DTSTART;TZID=Europe/Rome:20261109T093000
+DTEND;TZID=Europe/Rome:20261109T133000
+SUMMARY:Chi decide cosa è buono. Storia della gastronomia attraverso la c
+ ritica\, le guide e i media
+DESCRIPTION:Storia della gastronomia · Lezione\nCon: Federico De Cesare V
+ iola\, Identità Golose
+LOCATION:Aula 412 (Edificio IULM 4\, 1° piano)
+END:VEVENT
+BEGIN:VEVENT
+UID:fw-20261109-1430@master-food-wine
+DTSTAMP:20261030T160422Z
+DTSTART;TZID=Europe/Rome:20261109T143000
+DTEND;TZID=Europe/Rome:20261109T183000
+SUMMARY:Chi decide cosa è buono. Storia della gastronomia attraverso la c
+ ritica\, le guide e i media
+DESCRIPTION:Storia della gastronomia · Lezione\nCon: Federico De Cesare V
+ iola\, Identità Golose
+LOCATION:Aula 412 (Edificio IULM 4\, 1° piano)
+END:VEVENT
+BEGIN:VEVENT
+UID:fw-20261110-0930@master-food-wine
+DTSTAMP:20261030T160422Z
+DTSTART;TZID=Europe/Rome:20261110T093000
+DTEND;TZID=Europe/Rome:20261110T133000
+SUMMARY:Presentazione 1° PW "Nome logo e pay off" con VOTO
+DESCRIPTION:Storia della gastronomia · Project work\nCon: Wabisabi Studio
+ \nCon lo staff del master
+LOCATION:Aula 412 (Edificio IULM 4\, 1° piano)
+END:VEVENT
+BEGIN:VEVENT
+UID:fw-20261110-1430@master-food-wine
+DTSTAMP:20261030T160422Z
+DTSTART;TZID=Europe/Rome:20261110T143000
+DTEND;TZID=Europe/Rome:20261110T183000
+SUMMARY:Il valore del Genius loci: luoghi\, paesaggi\, comunità
+DESCRIPTION:Storia della gastronomia · Lezione\nCon: Franco Achilli
+LOCATION:Aula 412 (Edificio IULM 4\, 1° piano)
+END:VEVENT
+BEGIN:VEVENT
+UID:fw-20261111-0930@master-food-wine
+DTSTAMP:20261030T160422Z
+DTSTART;TZID=Europe/Rome:20261111T093000
+DTEND;TZID=Europe/Rome:20261111T133000
+SUMMARY:Il sistema agroalimentare: Il rapporto tra produzione e ristorazio
+ ne di qualità: strategie di sviluppo
+DESCRIPTION:Storia della gastronomia · Lezione\nCon: Alessandro Francesch
+ ini\, Andrea Fedrizzi\, Vitavigor\, Cortilia
+LOCATION:Aula 412 (Edificio IULM 4\, 1° piano)
+END:VEVENT
+BEGIN:VEVENT
+UID:fw-20261111-1430@master-food-wine
+DTSTAMP:20261030T160422Z
+DTSTART;TZID=Europe/Rome:20261111T143000
+DTEND;TZID=Europe/Rome:20261111T183000
+SUMMARY:Il sistema agroalimentare: Il rapporto tra produzione e ristorazio
+ ne di qualità: strategie di sviluppo
+DESCRIPTION:Storia della gastronomia · Lezione\nCon: Alessandro Francesch
+ ini\, Andrea Fedrizzi\, Vitavigor\, Cortilia
+LOCATION:Aula 412 (Edificio IULM 4\, 1° piano)
+END:VEVENT
+BEGIN:VEVENT
+UID:fw-20261112-0930@master-food-wine
+DTSTAMP:20261030T160422Z
+DTSTART;TZID=Europe/Rome:20261112T093000
+DTEND;TZID=Europe/Rome:20261112T133000
+SUMMARY:Excursus\, evoluzione e tendenze della cucina italiana
+DESCRIPTION:Storia della gastronomia · Lezione\nCon: Gabriele Zanatta
+LOCATION:Aula 412 (Edificio IULM 4\, 1° piano)
+END:VEVENT
+BEGIN:VEVENT
+UID:fw-20261112-1430@master-food-wine
+DTSTAMP:20261030T160422Z
+DTSTART;TZID=Europe/Rome:20261112T143000
+DTEND;TZID=Europe/Rome:20261112T183000
+SUMMARY:Test sistema agroalimentare con VOTO
+DESCRIPTION:Storia della gastronomia · Verifica\nCon: Alessandro Francesc
+ hini
+LOCATION:Aula 412 (Edificio IULM 4\, 1° piano)
+END:VEVENT
+END:VCALENDAR

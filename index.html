@@ -1,0 +1,1602 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Lezioni, docenti e ospiti del master Food & Wine Communication · Master universitario di primo livello · Università IULM · 2026/2027">
+<meta name="theme-color" content="#4A0F22">
+<meta name="robots" content="noindex">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Calendario Food & Wine Communication">
+<meta property="og:description" content="Lezioni, docenti e ospiti del master Food & Wine Communication · Master universitario di primo livello · Università IULM · 2026/2027">
+<meta property="og:url" content="https://masterfoodwine.github.io/xvi/">
+<meta name="apple-mobile-web-app-title" content="Master F&amp;W">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="favicon-48.png">
+<link rel="apple-touch-icon" href="icona-180.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="preload" href="fonts/manrope-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/manrope-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+<title>Calendario Food & Wine Communication</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<style>
+/* Caratteri ospitati sul sito stesso (cartella fonts/): nessuna richiesta a Google, nessun dato degli studenti a terzi */
+@font-face { font-family: "Manrope"; font-weight: 400; font-display: swap; src: url("fonts/manrope-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family: "Manrope"; font-weight: 500; font-display: swap; src: url("fonts/manrope-latin-500-normal.woff2") format("woff2"); }
+@font-face { font-family: "Manrope"; font-weight: 600; font-display: swap; src: url("fonts/manrope-latin-600-normal.woff2") format("woff2"); }
+@font-face { font-family: "Manrope"; font-weight: 700; font-display: swap; src: url("fonts/manrope-latin-700-normal.woff2") format("woff2"); }
+@font-face { font-family: "Manrope"; font-weight: 800; font-display: swap; src: url("fonts/manrope-latin-800-normal.woff2") format("woff2"); }
+/* ============================================================================
+   GUIDA RAPIDA ALLA GRAFICA
+   Idea: un'etichetta di vino. Fascia bordeaux in alto con il prossimo incontro,
+   barra fissa con le tre sezioni (Calendario, Docenti, Avvisi), poi l'agenda.
+   - Colori: tutti in :root qui sotto (tema chiaro) e nei due blocchi "tema scuro".
+     Il resto della pagina usa solo questi nomi: per cambiare un colore basta qui.
+   - Carattere: Manrope ovunque (è il font della M dell'icona). --f-titoli per
+     titoli e numeri (in grassetto 800), --f-testo per tutto il resto.
+     I file dei caratteri sono in assets/fonts (nessuna richiesta a Google).
+   ========================================================================== */
+:root {
+  --carta: #F6F3F2;          /* sfondo pagina */
+  --scheda: #FFFFFF;         /* sfondo delle schede */
+  --inchiostro: #1F1418;     /* testo principale */
+  --tenue: #6D6266;          /* testo secondario */
+  --filo: #E7E0DF;           /* bordi e linee */
+  --vino: #7A1A36;           /* colore del master */
+  --vino-marchio: #7A1A36;
+  --testata: #FFFFFF;        /* sfondo della testata con il titolo */   /* colore dell'icona: resta uguale anche in tema scuro */
+  --vino-tenue: #F4E6EA;
+  --fascia: #4A0F22;         /* fascia in alto */
+  --fascia-2: #2E0915;
+  --fascia-testo: #FBF5F3;
+  --fascia-tenue: #D6B9C1;
+  --fascia-filo: rgba(255, 240, 230, .16);
+  --oro: #CDA866;            /* dettagli champagne */
+  --oro-scuro: #8C6A2C;
+  --allerta: #B42318; --allerta-bg: #FDECEA;
+  --t-lezione: #44506A;  --t-lezione-bg: #E8ECF3;
+  --t-ospite: #7A1A36;   --t-ospite-bg: #F4E6EA;
+  --t-pw: #4E5B22;       --t-pw-bg: #EAEDDB;
+  --t-evento: #835A12;   --t-evento-bg: #F6EDD9;
+  --t-lab: #22605B;      --t-lab-bg: #DEEFEC;
+  --ombra: 0 1px 2px rgba(31, 20, 24, .05), 0 12px 32px rgba(31, 20, 24, .08);
+  --velo: rgba(24, 10, 16, .45);
+  --f-titoli: "Manrope", "Avenir Next", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --f-testo: "Manrope", "Avenir Next", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --r: 14px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --carta: #141012; --scheda: #1D181B; --inchiostro: #F1EAEC; --tenue: #A99EA3; --filo: #322A2E;
+    --vino: #EE9AB2; --vino-tenue: #3A1A25;
+    --fascia: #2B0A15; --fascia-2: #19060C; --fascia-testo: #FBF5F3; --fascia-tenue: #CBAAB4;
+    --fascia-filo: rgba(255, 240, 230, .13); --oro: #DDBB7A; --oro-scuro: #DDBB7A; --testata: #FBF5F3;
+    --allerta: #FF9C8F; --allerta-bg: #3B1714;
+    --t-lezione: #B2C0DE; --t-lezione-bg: #232A39;
+    --t-ospite: #EE9AB2;  --t-ospite-bg: #3A1A25;
+    --t-pw: #C2D38C;      --t-pw-bg: #29301A;
+    --t-evento: #E6C27A;  --t-evento-bg: #382C15;
+    --t-lab: #92D5CE;     --t-lab-bg: #18302E;
+    --ombra: 0 1px 2px rgba(0,0,0,.4), 0 12px 32px rgba(0,0,0,.4); --velo: rgba(0,0,0,.62);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --carta: #141012; --scheda: #1D181B; --inchiostro: #F1EAEC; --tenue: #A99EA3; --filo: #322A2E;
+  --vino: #EE9AB2; --vino-tenue: #3A1A25;
+  --fascia: #2B0A15; --fascia-2: #19060C; --fascia-testo: #FBF5F3; --fascia-tenue: #CBAAB4;
+  --fascia-filo: rgba(255, 240, 230, .13); --oro: #DDBB7A; --oro-scuro: #DDBB7A; --testata: #FBF5F3;
+  --allerta: #FF9C8F; --allerta-bg: #3B1714;
+  --t-lezione: #B2C0DE; --t-lezione-bg: #232A39;
+  --t-ospite: #EE9AB2;  --t-ospite-bg: #3A1A25;
+  --t-pw: #C2D38C;      --t-pw-bg: #29301A;
+  --t-evento: #E6C27A;  --t-evento-bg: #382C15;
+  --t-lab: #92D5CE;     --t-lab-bg: #18302E;
+  --ombra: 0 1px 2px rgba(0,0,0,.4), 0 12px 32px rgba(0,0,0,.4); --velo: rgba(0,0,0,.62);
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body { background: var(--carta); color: var(--inchiostro); font: 400 15px/1.6 var(--f-testo); -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+.wrap {
+  max-width: 1100px; margin: 0 auto;
+  padding-left: max(18px, env(safe-area-inset-left, 0px));
+  padding-right: max(18px, env(safe-area-inset-right, 0px));
+}
+button, input { font: inherit; color: inherit; }
+button { cursor: pointer; }
+:focus-visible { outline: 2px solid var(--oro); outline-offset: 2px; border-radius: 6px; }
+a { color: var(--vino); text-underline-offset: 3px; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.ico { width: 18px; height: 18px; flex: none; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.eyebrow { font: 700 11px/1.3 var(--f-testo); letter-spacing: .18em; text-transform: uppercase; }
+
+/* ============================ FASCIA IN ALTO ============================ */
+.hero {
+  background:
+    radial-gradient(90% 120% at 100% 0%, color-mix(in srgb, var(--oro) 13%, transparent), transparent 60%),
+    linear-gradient(165deg, var(--fascia), var(--fascia-2));
+  color: var(--fascia-testo);
+}
+.hero .wrap { padding-block: 18px 26px; display: grid; gap: 22px; }
+.toprow { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.brand { display: flex; align-items: center; gap: 12px; min-width: 0; }
+.brandlogo { height: 34px; width: auto; display: block; }
+/* marchio: la stessa M dell'icona dell'app (Manrope 800, bordeaux su bianco, edizione sotto) */
+.mark { flex: none; width: 46px; height: 46px; border-radius: 11px; background: #fff; color: var(--vino-marchio); display: grid; place-content: center; justify-items: center; gap: 0; box-shadow: 0 0 0 1px color-mix(in srgb, var(--oro) 35%, transparent); }
+.mark b { font: 800 25px/.8 var(--f-testo); letter-spacing: -.04em; }
+.mark i { width: 15px; height: 1.5px; background: currentColor; margin: 4px 0 3px; }
+.mark span { font: 700 6.5px/1 var(--f-testo); letter-spacing: .34em; margin-right: -.34em; }
+.kicker { color: var(--fascia-tenue); display: flex; flex-wrap: wrap; gap: 2px 10px; }
+.kicker b { color: var(--oro); font-weight: 700; }
+.bell {
+  position: relative; flex: none; width: 42px; height: 42px; border-radius: 50%; display: grid; place-items: center;
+  border: 1px solid var(--fascia-filo); background: transparent; color: var(--fascia-testo);
+}
+.bell:hover { border-color: var(--oro); }
+.bell .ico { width: 20px; height: 20px; }
+.badge { position: absolute; top: -3px; right: -3px; min-width: 19px; height: 19px; padding: 0 5px; border-radius: 999px; background: var(--oro); color: var(--fascia-2); font: 800 11px/19px var(--f-testo); text-align: center; }
+
+/* testata bianca: bordeaux su bianco come l'icona; schema dei titoli IULM (etichetta + titolo grande) */
+.label { background: var(--testata); color: var(--vino-marchio); border-radius: 22px; padding: clamp(22px, 4vw, 44px); display: grid; gap: 0; }
+.label .ey { font: 700 11.5px/1.4 var(--f-testo); letter-spacing: .2em; text-transform: uppercase; color: #8C6A2C; margin-bottom: 16px; }
+.title { margin: 0; font: 800 clamp(34px, 9.2vw, 104px)/.96 var(--f-titoli); letter-spacing: -.045em; }
+.title > span { display: block; white-space: nowrap; }
+.title .amp { font-weight: 500; color: #B08A45; }
+.label .meta { margin-top: 22px; padding-top: 16px; border-top: 1px solid #EADDE1; display: flex; flex-wrap: wrap; gap: 6px 0; column-gap: 18px; font: 600 13.5px/1.4 var(--f-testo); color: #6D6266; }
+.label .meta span + span { padding-left: 18px; border-left: 1px solid #DCCDD2; }
+.label .meta b { color: var(--vino-marchio); }
+@media (max-width: 600px) { .label .meta .u { flex-basis: 100%; border-left: 0; padding-left: 0; } .label .ey { font-size: 10.5px; letter-spacing: .14em; } }
+.hero-grid { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 16px 22px; align-items: start; }
+.alert {
+  display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: 10px; align-items: center;
+  border: 1px solid color-mix(in srgb, var(--oro) 55%, transparent); background: color-mix(in srgb, var(--oro) 12%, transparent);
+  border-radius: var(--r); padding: 12px 12px 12px 14px;
+}
+.alert .ico { color: var(--oro); margin-top: 2px; }
+.alert b { display: block; font-weight: 700; font-size: 14.5px; }
+.alert p { margin: 2px 0 0; font-size: 13.5px; color: var(--fascia-tenue); }
+.alert .acts { display: flex; gap: 6px; align-items: center; }
+.alert button { border: 0; background: none; color: var(--fascia-testo); font-size: 13px; font-weight: 700; padding: 6px 8px; border-radius: 8px; }
+.alert button.x { font-size: 18px; line-height: 1; color: var(--fascia-tenue); }
+
+.next {
+  border: 1px solid var(--fascia-filo); border-radius: 20px; padding: 20px 22px 18px;
+  background: color-mix(in srgb, var(--fascia-2) 60%, transparent); display: grid; gap: 10px; min-width: 0;
+  box-shadow: inset 0 0 0 4px color-mix(in srgb, var(--fascia-2) 40%, transparent);
+}
+.next-top { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.next .lbl { color: var(--oro); display: inline-flex; align-items: center; gap: 8px; }
+.next .lbl::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--oro); }
+.next.live .lbl::before { animation: pulse 1.6s ease-in-out infinite; }
+@keyframes pulse { 50% { opacity: .2; } }
+.count { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+.count b { font: 800 46px/.95 var(--f-titoli); letter-spacing: -.035em; font-variant-numeric: lining-nums; }
+.count span { font: 500 18px/1 var(--f-testo); color: var(--fascia-tenue); }
+.next .when { font-size: 13.5px; color: var(--fascia-tenue); font-variant-numeric: tabular-nums; }
+.next .what { font: 600 19px/1.3 var(--f-testo); text-wrap: balance; }
+.hero .chip { background: transparent; border-color: var(--fascia-filo); color: var(--fascia-testo); }
+.hero .chip .ini { background: color-mix(in srgb, var(--oro) 22%, transparent); color: var(--oro); }
+.hero .chip:hover, .hero .more:hover { border-color: var(--oro); }
+.hero .more { color: var(--fascia-testo); border-color: var(--fascia-filo); }
+.hero .extra, .hero .place { color: var(--fascia-tenue); }
+.hero .extra b, .hero .place b { color: var(--fascia-testo); }
+.next-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; padding-top: 14px; border-top: 1px solid var(--fascia-filo); }
+.hbtn {
+  display: inline-flex; align-items: center; gap: 7px; border-radius: 999px; padding: 9px 15px; font-size: 13.5px; font-weight: 700; text-decoration: none;
+  border: 1px solid var(--fascia-filo); background: transparent; color: var(--fascia-testo);
+}
+.hbtn:hover { border-color: var(--oro); }
+.hbtn.gold { background: var(--oro); border-color: var(--oro); color: var(--fascia-2); }
+.hbtn .ico { width: 16px; height: 16px; }
+
+/* ============================ PERCORSO (A TENDINA) ============================ */
+.path { border: 1px solid var(--fascia-filo); border-radius: 20px; background: color-mix(in srgb, var(--fascia-2) 35%, transparent); overflow: hidden; }
+.path-btn { width: 100%; border: 0; background: none; color: var(--fascia-testo); text-align: left; padding: 18px 20px; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 4px 14px; align-items: center; }
+.path-btn .eyebrow { color: var(--oro); grid-column: 1 / -1; }
+.path-btn .ora { font: 800 24px/1.1 var(--f-titoli); letter-spacing: -.025em; }
+.path-btn .ora em { font-style: normal; font-weight: 500; letter-spacing: 0; color: var(--fascia-tenue); font-size: .8em; }
+.path-btn .apri { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 700; color: var(--fascia-tenue); white-space: nowrap; }
+.path-btn .apri .ico { width: 16px; height: 16px; transition: transform .2s; }
+.path-btn[aria-expanded="true"] .apri .ico { transform: rotate(180deg); }
+.prog { grid-column: 1 / -1; display: flex; gap: 3px; margin-top: 8px; }
+.prog i { flex: 1; height: 4px; border-radius: 2px; background: color-mix(in srgb, var(--fascia-testo) 16%, transparent); }
+.prog i.fatto { background: color-mix(in srgb, var(--oro) 55%, transparent); }
+.prog i.ora { background: var(--oro); }
+.path-list { list-style: none; margin: 0; padding: 4px 8px 10px; border-top: 1px solid var(--fascia-filo); display: grid; max-height: 420px; overflow-y: auto; }
+.mrow { width: 100%; border: 0; background: none; color: var(--fascia-testo); text-align: left; display: grid; grid-template-columns: 92px minmax(0, 1fr) auto; gap: 12px; align-items: center; padding: 11px 12px; border-radius: 12px; }
+.mrow:hover, .mrow[aria-current="true"] { background: color-mix(in srgb, var(--oro) 14%, transparent); }
+.mrow .mn { font: 800 16px/1.1 var(--f-titoli); letter-spacing: -.02em; }
+.mrow .mt { font-size: 13.5px; font-weight: 600; line-height: 1.3; min-width: 0; }
+.mrow .md { display: block; font-size: 12px; font-weight: 500; color: var(--fascia-tenue); margin-top: 2px; font-variant-numeric: tabular-nums; }
+.mrow .st { font: 800 9.5px/1 var(--f-testo); letter-spacing: .1em; text-transform: uppercase; padding: 5px 7px; border-radius: 999px; white-space: nowrap; border: 1px solid var(--fascia-filo); color: var(--fascia-tenue); }
+.mrow .st.ora { background: var(--oro); border-color: var(--oro); color: var(--fascia-2); }
+.mrow .st.ok { color: var(--fascia-testo); }
+.mrow.passato { opacity: .55; }
+
+/* ============================ BARRA FISSA ============================ */
+.bar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: color-mix(in srgb, var(--carta) 90%, transparent); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--filo); }
+.bar .wrap { padding-block: 10px; display: grid; gap: 10px; }
+.bar-row { display: flex; align-items: center; gap: 10px; }
+.tabs { display: flex; flex: 1 1 auto; max-width: 400px; min-width: 0; background: var(--scheda); border: 1px solid var(--filo); border-radius: 999px; padding: 3px; }
+.tab { flex: 1 1 0; min-width: 0; border: 0; background: none; padding: 8px 10px; border-radius: 999px; font-weight: 700; font-size: 13.5px; color: var(--tenue); white-space: nowrap; display: inline-flex; justify-content: center; align-items: center; gap: 6px; }
+.tab[aria-selected="true"] { background: var(--inchiostro); color: var(--carta); }
+.tab .dot { min-width: 18px; height: 18px; padding: 0 5px; border-radius: 999px; background: var(--vino); color: var(--scheda); font: 800 10.5px/18px var(--f-testo); }
+.tab[aria-selected="true"] .dot { background: var(--oro); color: var(--fascia-2); }
+.ibtn { flex: none; margin-left: auto; width: 42px; height: 42px; border-radius: 50%; border: 1px solid var(--filo); background: var(--scheda); display: grid; place-items: center; color: var(--inchiostro); position: relative; }
+.ibtn + .ibtn { margin-left: 0; }
+.ibtn[aria-pressed="true"], .ibtn[aria-expanded="true"] { border-color: var(--inchiostro); }
+.ibtn .pip { position: absolute; top: 7px; right: 7px; width: 8px; height: 8px; border-radius: 50%; background: var(--vino); }
+.search { position: relative; }
+.search input { width: 100%; border: 1px solid var(--filo); background: var(--scheda); border-radius: 999px; padding: 10px 40px 10px 40px; font-size: 15px; }
+.search input::placeholder { color: var(--tenue); }
+.search > .ico { position: absolute; left: 14px; top: 50%; transform: translateY(-50%); color: var(--tenue); }
+.search .clear { position: absolute; right: 6px; top: 50%; transform: translateY(-50%); border: 0; background: none; color: var(--tenue); font-size: 20px; line-height: 1; padding: 4px 10px; border-radius: 999px; }
+.filters { display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; }
+.filters::-webkit-scrollbar { display: none; }
+.fchip { flex: none; border: 1px solid var(--filo); background: var(--scheda); border-radius: 999px; padding: 6px 12px; font-size: 13px; font-weight: 600; color: var(--tenue); display: inline-flex; align-items: center; gap: 7px; }
+.fchip i { width: 8px; height: 8px; border-radius: 50%; background: var(--c); }
+.fchip[aria-pressed="true"] { color: var(--c); border-color: var(--c); background: var(--cb); }
+
+/* ============================ CALENDARIO ============================ */
+main { padding-block: 6px 72px; min-height: 50vh; }
+.modhead { display: grid; gap: 8px; padding-block: 30px 4px; }
+.modhead .eyebrow { color: var(--vino); }
+.modhead h2 { margin: 0; font: 800 clamp(26px, 3.8vw, 38px)/1.08 var(--f-titoli); letter-spacing: -.03em; text-wrap: balance; }
+.modhead .meta { display: flex; flex-wrap: wrap; gap: 6px 16px; align-items: center; color: var(--tenue); font-size: 14px; font-variant-numeric: tabular-nums; }
+.modnav { display: inline-flex; gap: 6px; margin-left: auto; }
+.modnav button { width: 38px; height: 38px; border: 1px solid var(--filo); background: var(--scheda); border-radius: 50%; display: grid; place-items: center; }
+.modnav button:disabled { opacity: .35; cursor: default; }
+
+.week { margin-top: 28px; }
+.week-h { display: flex; align-items: center; gap: 12px; margin-bottom: 2px; color: var(--tenue); }
+.week-h::after { content: ""; flex: 1; height: 1px; background: var(--filo); }
+
+.day { display: grid; grid-template-columns: 84px minmax(0, 1fr); gap: 18px; padding-block: 16px; border-top: 1px solid var(--filo); scroll-margin-top: 150px; }
+.week .day:first-of-type { border-top: 0; }
+.date { display: grid; align-content: start; justify-items: start; gap: 2px; }
+.date .dn { font: 800 44px/.88 var(--f-titoli); letter-spacing: -.04em; font-variant-numeric: lining-nums; }
+.date .dw { font: 700 11px/1.3 var(--f-testo); letter-spacing: .14em; text-transform: uppercase; margin-top: 6px; }
+.date .mo { font-size: 12.5px; color: var(--tenue); }
+.date .oggi { margin-top: 6px; font: 800 10px/1 var(--f-testo); letter-spacing: .14em; text-transform: uppercase; color: var(--scheda); background: var(--vino); padding: 5px 8px; border-radius: 999px; }
+.day.today .dn, .day.today .dw { color: var(--vino); }
+.day.past .slot, .day.past .date { opacity: .55; }
+
+.slots { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; min-width: 0; }
+.slots.one { grid-template-columns: minmax(0, 1fr); }
+.slot { background: var(--scheda); border: 1px solid var(--filo); border-radius: var(--r); padding: 15px 16px 12px; display: grid; gap: 10px; align-content: start; min-width: 0; }
+.slot-top { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.time { font-size: 13.5px; font-weight: 600; color: var(--tenue); font-variant-numeric: tabular-nums; letter-spacing: .01em; }
+.time b { color: var(--inchiostro); font-weight: 800; }
+.tag { font: 800 10px/1 var(--f-testo); letter-spacing: .1em; text-transform: uppercase; padding: 5px 8px; border-radius: 999px; color: var(--c); background: var(--cb); white-space: nowrap; }
+.slot h3 { margin: 0; font: 700 16.5px/1.35 var(--f-testo); text-wrap: pretty; overflow-wrap: anywhere; letter-spacing: -.005em; }
+.det { margin: -4px 0 0; font: 500 14.5px/1.35 var(--f-testo); color: var(--tenue); }
+.hero .det { color: var(--fascia-tenue); margin: -4px 0 0; }
+.slot .mod-of { font-size: 12px; color: var(--tenue); }
+.people { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip {
+  display: inline-flex; align-items: center; gap: 7px; border: 1px solid var(--filo); background: var(--carta);
+  border-radius: 999px; padding: 3px 12px 3px 3px; font-size: 13.5px; font-weight: 600; line-height: 1.2; max-width: 100%; text-align: left;
+}
+.chip:hover { border-color: var(--vino); }
+.chip .ini { width: 26px; height: 26px; border-radius: 50%; display: grid; place-items: center; flex: none; background: var(--vino-tenue); color: var(--vino); font: 800 11.5px/1 var(--f-titoli); letter-spacing: 0; }
+.chip.org { padding-left: 12px; border-style: dashed; }
+.more { border: 1px dashed var(--filo); background: transparent; border-radius: 999px; padding: 5px 12px; font-size: 13px; font-weight: 700; color: var(--vino); }
+.extra, .place { font-size: 13.5px; color: var(--tenue); overflow-wrap: anywhere; margin: 0; display: flex; gap: 6px; align-items: flex-start; }
+.extra b, .place b { font-weight: 700; color: var(--inchiostro); }
+.place .ico { width: 15px; height: 15px; margin-top: 2px; color: var(--vino); }
+.hero .place .ico { color: var(--oro); }
+.slot-foot { display: flex; align-items: center; gap: 8px; padding-top: 10px; border-top: 1px solid var(--filo); }
+.mat { font-size: 12.5px; font-weight: 700; text-decoration: none; color: var(--vino); background: var(--vino-tenue); border-radius: 999px; padding: 6px 12px; display: inline-flex; gap: 6px; align-items: center; }
+.mat .ico { width: 15px; height: 15px; }
+.gcal { margin-left: auto; font-size: 12.5px; font-weight: 700; text-decoration: none; color: var(--tenue); display: inline-flex; gap: 6px; align-items: center; padding: 6px 4px; }
+.gcal .ico { width: 16px; height: 16px; }
+.gcal:hover { color: var(--vino); }
+
+.empty, .locked { margin-top: 26px; border: 1px dashed var(--filo); border-radius: 18px; padding: 28px; display: grid; gap: 8px; justify-items: start; }
+.locked h2, .empty h2 { margin: 0; font: 800 26px/1.15 var(--f-titoli); letter-spacing: -.025em; }
+.locked p, .empty p { margin: 0; color: var(--tenue); max-width: 60ch; }
+.btn { display: inline-flex; align-items: center; gap: 7px; text-decoration: none; font-weight: 700; font-size: 14px; border: 1px solid var(--filo); border-radius: 999px; padding: 9px 15px; color: var(--inchiostro); background: var(--scheda); }
+.btn:hover { border-color: var(--vino); }
+.btn.primary { background: var(--vino); border-color: var(--vino); color: var(--scheda); }
+.btn .ico { width: 16px; height: 16px; }
+
+/* ============================ PERSONE ============================ */
+.sec-head { padding-block: 30px 4px; display: grid; gap: 6px; }
+.sec-head h2 { margin: 0; font: 800 clamp(26px, 3.8vw, 38px)/1.08 var(--f-titoli); letter-spacing: -.03em; }
+.sec-head p { margin: 0; color: var(--tenue); max-width: 62ch; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; margin-top: 20px; }
+.pcard { text-align: left; border: 1px solid var(--filo); background: var(--scheda); border-radius: var(--r); padding: 16px; display: grid; grid-template-columns: 54px minmax(0, 1fr); gap: 2px 14px; align-items: start; }
+.pcard:hover { border-color: var(--vino); box-shadow: var(--ombra); }
+.mono { width: 54px; height: 54px; border-radius: 50%; display: grid; place-items: center; background: var(--vino-tenue); color: var(--vino); font: 800 18px/1 var(--f-titoli); grid-row: span 3; overflow: hidden; border: 1px solid color-mix(in srgb, var(--vino) 18%, transparent); }
+.mono img { width: 100%; height: 100%; object-fit: cover; }
+.pcard .nm { font-weight: 800; font-size: 15.5px; }
+.pcard .rl { font-size: 13.5px; color: var(--tenue); line-height: 1.4; }
+.pcard .ct { font-size: 12px; font-weight: 700; color: var(--vino); font-variant-numeric: tabular-nums; margin-top: 4px; }
+.sub-h { font: 800 24px/1.15 var(--f-titoli); letter-spacing: -.025em; margin: 40px 0 0; }
+.orgs { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 12px; margin-top: 14px; }
+.ocard { border: 1px solid var(--filo); background: var(--scheda); border-radius: var(--r); padding: 16px 18px; display: grid; gap: 6px; align-content: start; }
+.ocard h4 { margin: 0; font: 800 18px/1.2 var(--f-titoli); letter-spacing: -.02em; }
+.ocard p { margin: 0; color: var(--tenue); font-size: 14px; }
+.links { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; }
+.ocard .links a { font-size: 13.5px; font-weight: 700; }
+
+/* ============================ AVVISI ============================ */
+.news { display: grid; gap: 12px; }
+.nitem { position: relative; background: var(--carta); border: 1px solid var(--filo); border-radius: var(--r); padding: 16px 18px 16px 20px; display: grid; gap: 6px; }
+.nitem.imp { border-color: color-mix(in srgb, var(--allerta) 40%, var(--filo)); }
+.nitem.imp::before { content: ""; position: absolute; left: -1px; top: 14px; bottom: 14px; width: 3px; border-radius: 0 3px 3px 0; background: var(--allerta); }
+.nmeta { display: flex; flex-wrap: wrap; gap: 6px 10px; align-items: center; font-size: 12.5px; color: var(--tenue); font-variant-numeric: tabular-nums; }
+.pill { font: 800 10px/1 var(--f-testo); letter-spacing: .1em; text-transform: uppercase; padding: 5px 8px; border-radius: 999px; }
+.pill.imp { color: var(--allerta); background: var(--allerta-bg); }
+.pill.auto { color: var(--tenue); background: var(--carta); border: 1px solid var(--filo); }
+.pill.new { color: var(--scheda); background: var(--vino); }
+.nitem h3 { margin: 0; font: 700 16.5px/1.35 var(--f-testo); text-wrap: balance; }
+.nsez { margin: 18px 0 8px; font: 700 11px/1.3 var(--f-testo); letter-spacing: .18em; text-transform: uppercase; color: var(--tenue); }
+.nsez:first-of-type { margin-top: 4px; }
+.news.old .nitem { background: transparent; }
+.news.old .nitem h3 { color: var(--tenue); }
+.nitem p { margin: 0; color: var(--tenue); font-size: 14.5px; max-width: 65ch; }
+.nitem .links { margin-top: 4px; }
+.nitem .links button, .nitem .links a { font-size: 13.5px; font-weight: 700; border: 0; background: none; color: var(--vino); padding: 0; text-decoration: underline; text-underline-offset: 3px; }
+
+footer { margin-block: 34px 28px; padding-top: 18px; border-top: 1px solid var(--filo); color: var(--tenue); font-size: 12.5px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 18px; }
+
+/* ============================ PULSANTE "OGGI" ============================ */
+.fab {
+  position: fixed; z-index: 6; right: max(18px, calc(env(safe-area-inset-right, 0px) + 12px)); bottom: calc(18px + env(safe-area-inset-bottom, 0px));
+  display: inline-flex; align-items: center; gap: 8px; border: 0; border-radius: 999px; padding: 12px 18px;
+  background: var(--inchiostro); color: var(--carta); font-weight: 800; font-size: 14px; box-shadow: var(--ombra);
+  transition: opacity .2s, transform .2s;
+}
+.fab .ico { width: 17px; height: 17px; }
+.fab.off { opacity: 0; transform: translateY(12px); pointer-events: none; }
+
+/* ============================ PANNELLO ============================ */
+.velo { position: fixed; inset: 0; background: var(--velo); opacity: 0; transition: opacity .2s; z-index: 20; }
+.velo.on { opacity: 1; }
+.panel {
+  position: fixed; z-index: 21; background: var(--scheda); color: var(--inchiostro); box-shadow: var(--ombra);
+  top: 0; right: 0; bottom: 0; width: min(480px, 100%);
+  padding: calc(22px + env(safe-area-inset-top, 0px)) calc(26px + env(safe-area-inset-right, 0px)) calc(30px + env(safe-area-inset-bottom, 0px)) 26px;
+  overflow-y: auto; overscroll-behavior: contain; transform: translateX(102%); transition: transform .28s cubic-bezier(.2,.8,.2,1); display: grid; align-content: start; gap: 16px; border-left: 1px solid var(--filo);
+}
+.panel.on { transform: none; }
+.panel .close { justify-self: end; border: 1px solid var(--filo); background: var(--carta); border-radius: 999px; padding: 7px 14px; font-size: 13px; font-weight: 700; }
+.grab { display: none; }
+.p-head { display: grid; grid-template-columns: 76px minmax(0, 1fr); gap: 16px; align-items: center; }
+.segnala { margin: 4px 0 0; padding-top: 14px; border-top: 1px solid var(--filo); font-size: 13px; color: var(--tenue); }
+.segnala a { color: var(--vino); font-weight: 700; text-underline-offset: 3px; }
+.p-head .mono { width: 76px; height: 76px; font-size: 30px; grid-row: auto; }
+.p-head h2 { margin: 0; font: 800 26px/1.1 var(--f-titoli); letter-spacing: -.03em; }
+.p-head .rl { color: var(--tenue); font-size: 14px; margin-top: 6px; }
+.panel .eyebrow { color: var(--tenue); margin-top: 8px; }
+.panel p { margin: 0; }
+.bio { font-size: 15.5px; line-height: 1.7; }
+.note { font-size: 13.5px; color: var(--t-evento); background: var(--t-evento-bg); padding: 10px 12px; border-radius: 10px; }
+.mini { display: grid; gap: 0; }
+.mini div { display: grid; grid-template-columns: 96px minmax(0, 1fr); gap: 12px; font-size: 14px; padding-block: 10px; border-top: 1px solid var(--filo); }
+.mini div:first-child { border-top: 0; }
+.mini .d { font-size: 12.5px; font-weight: 700; color: var(--tenue); font-variant-numeric: tabular-nums; line-height: 1.5; }
+.org-box { border: 1px solid var(--filo); background: var(--carta); border-radius: var(--r); padding: 14px 16px; display: grid; gap: 4px; }
+.org-box b { font: 800 17px/1.2 var(--f-titoli); letter-spacing: -.02em; }
+.org-box p { color: var(--tenue); font-size: 14px; }
+.copyrow { display: flex; gap: 8px; align-items: stretch; }
+.copyrow input { flex: 1; min-width: 0; border: 1px solid var(--filo); background: var(--carta); border-radius: 10px; padding: 9px 11px; font-size: 12.5px; }
+.steps { margin: 0; padding-left: 20px; display: grid; gap: 6px; font-size: 14px; color: var(--tenue); }
+.steps b { color: var(--inchiostro); }
+
+/* ============================ TELEFONO ============================ */
+@media (min-width: 761px) {
+  .only-phone { display: none !important; }
+}
+@media (max-width: 760px) {
+  .only-desk { display: none !important; }
+  .hero .wrap { padding-block: 14px 20px; gap: 18px; }
+  .hero-grid { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+  .mrow { grid-template-columns: 78px minmax(0, 1fr) auto; padding: 10px 8px; gap: 10px; }
+  .next { padding: 18px 18px 16px; border-radius: 18px; }
+  .count b { font-size: 44px; }
+  .slots { grid-template-columns: minmax(0, 1fr); }
+  .day { grid-template-columns: 52px minmax(0, 1fr); gap: 12px; }
+  .date .dn { font-size: 40px; }
+  .date .dw { font-size: 10px; letter-spacing: .1em; }
+  .date .mo { font-size: 11.5px; }
+  .modhead { padding-block: 24px 0; }
+  .panel { top: auto; left: 0; width: 100%; max-height: 90%; border-left: 0; border-top: 1px solid var(--filo); border-radius: 22px 22px 0 0; transform: translateY(102%);
+    padding: 10px max(20px, env(safe-area-inset-right, 0px)) calc(28px + env(safe-area-inset-bottom, 0px)) max(20px, env(safe-area-inset-left, 0px)); }
+  .grab { display: block; justify-self: center; width: 40px; height: 4px; border-radius: 4px; background: var(--filo); }
+  .p-head { grid-template-columns: 64px minmax(0, 1fr); }
+  .p-head .mono { width: 64px; height: 64px; font-size: 26px; }
+  .p-head h2 { font-size: 28px; }
+}
+/* ============================ EVENTI ============================
+   Card di un evento che si espande nel calendario (fogli Eventi e Programma di anagrafica.xlsx). */
+.slot.ev-open { grid-column: 1 / -1; }
+.exp-btn { display: flex; align-items: center; justify-content: space-between; gap: 10px; width: 100%; text-align: left; border: 1px solid #E8D3A6; background: #FBF4E4; color: #5A4515; border-radius: 12px; padding: 11px 14px; font: 800 13.5px/1.3 var(--f-testo); }
+.exp-btn .ico { width: 16px; height: 16px; flex: none; transition: transform .2s; }
+.exp-btn[aria-expanded="true"] .ico { transform: rotate(180deg); }
+.exp { display: grid; gap: 14px; }
+.ev-intro { margin: 0; font-size: 14.5px; line-height: 1.55; color: var(--tenue); max-width: 90ch; }
+.slot.ev-open { border-left: 3px solid #B08A45 !important; }
+.slot.ev-open .exp-btn { background: none; border: 0; border-top: 1px solid var(--filo); border-radius: 0; padding: 12px 0 2px; color: var(--vino); }
+.slot.ev-open .exp { gap: 18px; }
+.ev-cols { display: grid; grid-template-columns: minmax(0, 1fr); gap: 18px; }
+.ev-l, .ev-r { display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; align-content: start; min-width: 0; }
+.ev-facts { border-top: 1px solid var(--filo); border-bottom: 1px solid var(--filo); }
+.ev-facts div { display: grid; grid-template-columns: 20px minmax(0, 1fr); gap: 10px; padding: 12px 0; font-size: 14px; line-height: 1.45; border-top: 1px solid var(--filo); color: var(--tenue); }
+.ev-facts div:first-child { border-top: 0; }
+.ev-facts b { display: block; color: var(--inchiostro); }
+.ev-facts .ico { width: 18px; height: 18px; color: var(--vino); margin-top: 1px; }
+.ev-note { font-size: 14px; line-height: 1.5; color: var(--tenue); }
+.ev-note b { display: block; font: 800 10.5px/1.4 var(--f-testo); letter-spacing: .18em; text-transform: uppercase; color: #8C6A2C; margin-bottom: 3px; }
+.exp .eyebrow { color: var(--tenue); }
+.tl { display: grid; grid-template-columns: minmax(0, 1fr); border-left: 1px solid #E2CFA0; margin-left: 5px; }
+.tl .r { position: relative; display: grid; grid-template-columns: 96px minmax(0, 1fr); gap: 12px; padding: 10px 0 10px 22px; }
+.tl .r::before { content: ""; position: absolute; left: -5px; top: 16px; width: 9px; height: 9px; border-radius: 50%; background: #B08A45; box-shadow: 0 0 0 3px var(--scheda); }
+.tl .t { font: 800 12.5px/1.5 var(--f-testo); color: var(--vino); font-variant-numeric: tabular-nums; }
+.tl .h { font: 800 15.5px/1.3 var(--f-titoli); letter-spacing: -.01em; color: var(--inchiostro); }
+.tl .k { display: block; font: 800 10px/1 var(--f-testo); letter-spacing: .16em; text-transform: uppercase; color: #8C6A2C; margin-bottom: 6px; }
+.tl .d { margin: 4px 0 0; font-size: 13.5px; line-height: 1.5; color: var(--tenue); }
+.tl .sp { margin: 6px 0 0; padding: 0; list-style: none; font-size: 13.5px; line-height: 1.5; color: var(--tenue); }
+.tl .sp b { color: var(--inchiostro); font-weight: 700; }
+.mz { margin: 0; font-size: 13.5px; line-height: 1.75; color: var(--tenue); }
+.mz .sep { color: #B08A45; font-weight: 700; padding: 0 3px; }
+@media (min-width: 761px) { .ev-cols { grid-template-columns: 320px minmax(0, 1fr); column-gap: 40px; } }
+.ev-acts { display: flex; flex-wrap: wrap; gap: 8px; }
+.slot.ev-hl { box-shadow: 0 0 0 3px var(--oro); }
+.alert button[data-apri-ev] { background: var(--oro); color: var(--fascia-2); padding: 8px 14px; border-radius: 999px; }
+.alert { align-items: start; }
+@media (max-width: 600px) {
+  .tl .r { grid-template-columns: minmax(0, 1fr); gap: 2px; }
+  .tl .r::before { top: 14px; }
+  .alert { grid-template-columns: auto minmax(0, 1fr); }
+  .alert .acts { grid-column: 1 / -1; justify-content: space-between; }
+}
+
+/* sezione Eventi sotto la testata: filetto oro, si popola dal foglio Eventi */
+.evid { border-left: 3px solid var(--oro); padding: 4px 0 4px 22px; color: var(--fascia-testo); display: grid; gap: 14px; }
+.evid .top { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 12px 28px; align-items: center; }
+.evid .ey { font: 700 11px/1.3 var(--f-testo); letter-spacing: .2em; text-transform: uppercase; color: var(--oro); }
+.evid h3 { margin: 5px 0 0; font: 800 clamp(24px, 3.2vw, 34px)/1.05 var(--f-titoli); letter-spacing: -.035em; }
+.evid .info { margin: 6px 0 0; font-size: 14px; line-height: 1.5; color: #E3CFD5; }
+.evid .rule { margin: 6px 0 0; font-size: 13.5px; line-height: 1.5; color: var(--fascia-tenue); max-width: 70ch; }
+.evid .rule b { color: var(--fascia-testo); font-weight: 700; }
+.evid .go { display: inline-flex; align-items: center; gap: 8px; border: 1px solid var(--oro); background: transparent; color: var(--fascia-testo); border-radius: 999px; padding: 11px 18px; font: 800 13.5px/1 var(--f-testo); white-space: nowrap; }
+.evid .go:hover { background: color-mix(in srgb, var(--oro) 16%, transparent); }
+.evid .go .ico { width: 16px; height: 16px; }
+.evid-more { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--fascia-filo); }
+.evid-more button { width: 100%; display: grid; grid-template-columns: 110px minmax(0, 1fr) auto; gap: 12px; align-items: center; text-align: left; border: 0; border-bottom: 1px solid var(--fascia-filo); background: none; color: var(--fascia-testo); padding: 11px 0; font: 700 14.5px/1.3 var(--f-testo); }
+.evid-more .d { font: 700 11px/1.3 var(--f-testo); letter-spacing: .14em; text-transform: uppercase; color: var(--oro); }
+.evid-more .ico { width: 16px; height: 16px; color: var(--oro); }
+@media (max-width: 600px) { .evid { padding-left: 16px; } .evid .top { grid-template-columns: minmax(0, 1fr); } .evid .go { justify-self: start; } .evid-more button { grid-template-columns: 84px minmax(0, 1fr) auto; } }
+
+/* ============================ ARCHIVIO ============================
+   Le giornate già passate del modulo sono raccolte sotto un pulsante. */
+.arch { margin-top: 22px; }
+.arch-btn { display: flex; align-items: center; gap: 12px; width: 100%; border: 1px solid var(--fondo-filo, var(--filo)); background: color-mix(in srgb, var(--fondo-testo, #fff) 7%, transparent); color: var(--fondo-testo, var(--inchiostro)); border-radius: 14px; padding: 13px 16px; text-align: left; font: 700 14px/1.3 var(--f-testo); }
+.arch-btn .ico { width: 18px; height: 18px; flex: none; color: var(--oro); }
+.arch-btn .n { color: var(--fondo-tenue, var(--tenue)); font-weight: 600; }
+.arch-btn .chev { margin-left: auto; transition: transform .2s; }
+.arch-btn[aria-expanded="true"] .chev { transform: rotate(180deg); }
+.arch-body .week:first-child { margin-top: 14px; }
+.arch-end { display: flex; align-items: center; gap: 12px; margin-top: 26px; color: var(--fondo-tenue, var(--tenue)); font: 700 11px/1 var(--f-testo); letter-spacing: .16em; text-transform: uppercase; }
+.arch-end::before, .arch-end::after { content: ""; flex: 1; height: 1px; background: var(--fondo-filo, var(--filo)); }
+
+/* ============================ FONDO BORDEAUX ============================
+   Sotto la fascia il bordeaux continua: calendario e docenti su fondo scuro,
+   lezioni e schede come card bianche (stesso abbinamento dell'icona). */
+:root { --fondo: #3A0B1A; --fondo-testo: #FBF5F3; --fondo-tenue: #D6B9C1; --fondo-filo: rgba(255, 240, 230, .14); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --fondo: #1E0710; } :root:not([data-theme="light"]) :is(.slot, .pcard, .ocard) { border-color: var(--filo); } }
+:root[data-theme="dark"] { --fondo: #1E0710; }
+:root[data-theme="dark"] :is(.slot, .pcard, .ocard) { border-color: var(--filo); }
+body { background: var(--fondo); }
+.hero { background:
+    radial-gradient(90% 120% at 100% 0%, color-mix(in srgb, var(--oro) 13%, transparent), transparent 60%),
+    linear-gradient(180deg, var(--fascia), var(--fondo)); }
+.bar { background: color-mix(in srgb, var(--fondo) 92%, transparent); border-bottom-color: var(--fondo-filo); }
+.ibtn { border-color: transparent; }
+.modhead .eyebrow { color: var(--oro); }
+.modhead h2, .sec-head h2, .sub-h { color: var(--fondo-testo); }
+.modhead .meta, .sec-head p, footer { color: var(--fondo-tenue); }
+footer { border-top-color: var(--fondo-filo); }
+.week-h { color: var(--fondo-tenue); }
+.week-h::after { background: var(--fondo-filo); }
+.day { border-top-color: var(--fondo-filo); }
+.date .dn, .date .dw { color: var(--fondo-testo); }
+.date .mo { color: var(--fondo-tenue); }
+.day.today .dn, .day.today .dw { color: var(--oro); }
+.date .oggi { background: var(--oro); color: var(--fascia-2); }
+.slot, .pcard, .ocard { border-color: transparent; }
+.day.past .slot { opacity: 1; }
+.day.past .slot > * { opacity: .5; }
+.empty, .locked { border-color: color-mix(in srgb, var(--fondo-testo) 30%, transparent); color: var(--fondo-testo); }
+.locked p, .empty p { color: var(--fondo-tenue); }
+@media (prefers-reduced-motion: reduce) {
+  .panel, .velo, .seg, .fab { transition: none; }
+  .next.live .lbl::before { animation: none; }
+}
+</style>
+<style></style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-bell" viewBox="0 0 24 24"><path d="M6 9a6 6 0 1 1 12 0c0 5 2 6.5 2 6.5H4S6 14 6 9Z"/><path d="M10 19a2 2 0 0 0 4 0"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-4-4"/></symbol>
+  <symbol id="i-filter" viewBox="0 0 24 24"><path d="M4 6h16M7 12h10M10 18h4"/></symbol>
+  <symbol id="i-cal" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4M12 13v5M9.5 15.5h5"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11Z"/><circle cx="12" cy="10" r="2.3"/></symbol>
+  <symbol id="i-file" viewBox="0 0 24 24"><path d="M7 3h7l5 5v12a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Z"/><path d="M14 3v5h5"/></symbol>
+  <symbol id="i-arrow-l" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></symbol>
+  <symbol id="i-arrow-r" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+  <symbol id="i-today" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="2.5"/></symbol>
+  <symbol id="i-glass" viewBox="0 0 24 24"><path d="M8 3h8l-.6 6.2a3.4 3.4 0 0 1-6.8 0L8 3Z"/><path d="M12 12.6V20M8.5 20.5h7"/></symbol>
+  <symbol id="i-archive" viewBox="0 0 24 24"><path d="M3.5 4.5h17v4h-17zM5 8.5v11h14v-11M10 12.5h4"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3.5 2.8 19.5h18.4L12 3.5Z"/><path d="M12 10v4.5M12 17.2v.1"/></symbol>
+</svg>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="toprow">
+      <div class="brand" id="brand"></div>
+      <button class="bell" id="bell" aria-label="Avvisi"><svg class="ico"><use href="#i-bell"/></svg><span class="badge" id="bell-n" hidden></span></button>
+    </div>
+    <div id="alert-slot"></div>
+    <div class="label">
+      <div class="ey" id="lede"></div>
+      <h1 class="title"><span>Food <span class="amp">&amp;</span> Wine</span><span>Communication</span></h1>
+      <div class="meta" id="ed"></div>
+    </div>
+    <section class="evid" id="evid" aria-label="Eventi in programma" hidden></section>
+    <div class="hero-grid">
+      <section class="next" id="next" aria-live="polite"></section>
+      <section class="path" aria-label="Il percorso degli studenti">
+        <button class="path-btn" id="path-btn" aria-expanded="false" aria-controls="path-list"></button>
+        <ol class="path-list" id="path-list" hidden></ol>
+      </section>
+    </div>
+  </div>
+</header>
+
+<div class="bar" id="bar">
+  <div class="wrap">
+    <div class="bar-row">
+      <div class="tabs" role="tablist" aria-label="Sezioni">
+        <button class="tab" role="tab" id="tab-cal" aria-selected="true">Calendario</button>
+        <button class="tab" role="tab" id="tab-ppl" aria-selected="false">Docenti e ospiti</button>
+      </div>
+      <button class="ibtn" id="btn-search" aria-label="Cerca" aria-expanded="false"><svg class="ico"><use href="#i-search"/></svg></button>
+      <button class="ibtn" id="btn-filter" aria-label="Filtra per tipo di incontro" aria-expanded="false"><svg class="ico"><use href="#i-filter"/></svg><span class="pip" id="filter-pip" hidden></span></button>
+    </div>
+    <label class="search" id="search" hidden>
+      <span class="sr">Cerca</span>
+      <svg class="ico" aria-hidden="true"><use href="#i-search"/></svg>
+      <input id="q" type="search" enterkeyhint="search" placeholder="Cerca un argomento, un docente, un'azienda…" autocomplete="off">
+      <button class="clear" id="q-clear" aria-label="Cancella ricerca" hidden>×</button>
+    </label>
+    <div class="filters" id="filters" aria-label="Filtra per tipo" hidden></div>
+  </div>
+</div>
+
+<div class="wrap">
+  <main id="view"></main>
+  <footer id="foot"></footer>
+</div>
+
+<button class="fab off" id="fab" aria-label="Vai alla lezione di oggi"><svg class="ico"><use href="#i-today"/></svg><span id="fab-t">Oggi</span></button>
+<div class="velo" id="velo" hidden></div>
+<aside class="panel" id="panel" role="dialog" aria-modal="true" aria-labelledby="p-name" hidden></aside>
+
+<script>
+const D = {"master": {"titolo_master": "Food & Wine Communication", "sottotitolo": "Master universitario di primo livello · Università IULM", "edizione": "2026/2027", "numero_edizione": "XVI", "logo": "", "logo_alt": ""}, "aggiornato": "30/10/2026 17:04", "moduli": [{"id": "presentazione", "numero": 0, "titolo": "Presentazione, ice breaking e team building", "dal": "2026-10-19", "al": "2026-10-21", "pubblicato": true, "avvisi": [], "giorni": [{"data": "2026-10-19", "lezioni": [{"data": "2026-10-19", "inizio": "10:00", "fine": "13:30", "titolo": "Apertura del master ed evento Food Talks", "tipo": "Evento", "modulo": "presentazione", "persone": ["vincenzo-russo", "maurizio-trezzi", "gabriele-zanatta", "maria-novella-valenti", "carla-icardi", "marco-muggiano", "marco-sutter", "gesualdo-vercio", "fabiola-fiorentino", "marina-potassa", "tiziana-formisano", "beatrice-reggiani"], "organizzazioni": [], "altri": [], "luogo": "Aula Seminari (Edificio IULM 1, 6° piano)", "dettaglio": "", "staff": false, "materiali": ""}, {"data": "2026-10-19", "inizio": "14:30", "fine": "18:30", "titolo": "Introduzione generale e presentazione degli studenti", "tipo": "Lezione", "modulo": "presentazione", "persone": ["vincenzo-russo"], "organizzazioni": [], "altri": [], "luogo": "Aula 412 (Edificio IULM 4, 1° piano)", "dettaglio": "", "staff": false, "materiali": ""}]}, {"data": "2026-10-20", "lezioni": [{"data": "2026-10-20", "inizio": "09:30", "fine": "13:30", "titolo": "Ice breaking", "tipo": "Workshop", "modulo": "presentazione", "persone": ["massimo-bustreo"], "organizzazioni": [], "altri": [], "luogo": "The Bridge (Edificio IULM 6, 1° piano)", "dettaglio": "", "staff": false, "materiali": ""}, {"data": "2026-10-20", "inizio": "14:30", "fine": "18:30", "titolo": "Ice breaking", "tipo": "Workshop", "modulo": "presentazione", "persone": ["massimo-bustreo"], "organizzazioni": [], "altri": [], "luogo": "The Bridge (Edificio IULM 6, 1° piano)", "dettaglio": "", "staff": false, "materiali": ""}]}, {"data": "2026-10-21", "lezioni": [{"data": "2026-10-21", "inizio": "09:30", "fine": "13:30", "titolo": "Introduzione alla comunicazione del food and wine e neuroscienze", "tipo": "Lezione", "modulo": "presentazione", "persone": ["vincenzo-russo"], "organizzazioni": [], "altri": [], "luogo": "Aula 412 (Edificio IULM 4, 1° piano)", "dettaglio": "", "staff": false, "materiali": ""}, {"data": "2026-10-21", "inizio": "14:30", "fine": "17:30", "titolo": "Introduzione al Marketing del Food e lancio del progetto Designing your first marketing plan", "tipo": "Lezione", "modulo": "presentazione", "persone": ["massimiliano-freddi"], "organizzazioni": [], "altri": [], "luogo": "Aula 412 (Edificio IULM 4, 1° piano)", "dettaglio": "", "staff": false, "materiali": ""}]}]}, {"id": "modulo-1", "numero": 1, "titolo": "Il sistema enogastronomico ed agroalimentare", "dal": "2026-10-22", "al": "2026-11-04", "pubblicato": true, "avvisi": [], "giorni": [{"data": "2026-10-22", "lezioni": [{"data": "2026-10-22", "inizio": "09:30", "fine": "13:30", "titolo": "Il sistema agro-alimentare, i distretti agroalimentari e i network territoriali (consorzi, associazioni, ed altre organizzazioni territoriali)", "tipo": "Lezione", "modulo": "modulo-1", "persone": ["alessandro-franceschini"], "organizzazioni": [], "altri": [], "luogo": "Aula 412 (Edificio IULM 4, 1° piano)", "dettaglio": "", "staff": false, "materiali": ""}, {"data": "2026-10-22", "inizio": "14:30", "fine": "18:30", "titolo": "Il sistema agro-alimentare, i distretti agroalimentari e i network territoriali (consorzi, associazioni, ed altre organizzazioni territoriali)", "tipo": "Lezione", "modulo": "modulo-1", "persone": ["alessandro-franceschini"], "organizzazioni": [], "altri": [], "luogo": "Aula 412 (Edificio IULM 4, 1° piano)", "dettaglio": "", "staff": false, "materiali": ""}]}, {"data": "2026-10-23", "lezioni": [{"data": "2026-10-23", "inizio": "09:30", "fine": "13:30", "titolo": "Le dinamiche del mercato dei prodotti alimentari e relativi effetti sui consumi e sul comportamento del consumatore", "tipo": "Lezione", "modulo": "modulo-1", "persone": ["alessandro-franceschini"], "organizzazioni": [], "altri": [], "luogo": "Aula 412 (Edificio IULM 4, 1° piano)", "dettaglio": "", "staff": false, "materiali": ""}, {"data": "2026-10-23", "inizio": "14:30", "fine": "20:00", "titolo": "Champagne Forum", "tipo": "Evento", "modulo": "modulo-1", "persone": [], "organizzazioni": [], "altri": [], "luogo": "Auditorium (Edificio IULM 6, Piano terra)", "dettaglio": "", "staff": false, "materiali": "", "evento": {"data": "2026-10-23", "titolo": "Champagne Forum", "id": "2026-10-23-champagne-forum", "descrizione": "Seconda edizione del Forum, ospitato dalla Reunion dei Laureati e degli Ambassador IULM (iulmalumni Day). Un progetto di Chiara Giovoni, Ambassadeur du Champagne, e Marco Muggiano, Presidente IULM Alumni.", "orari": "14:30 registrazione · inizio lavori 15:00 · fine 20:00", "luogo": "Auditorium · IULM 6, piano terra · Via Carlo Bo 7", "breve": "20 maison di Champagne · panel con produttori, Chef de Caves e manager", "nota": "Degustazione delle 18:00 a posti limitati: l’accesso è riservato a chi partecipa ai panel del pomeriggio ed è registrato entro le 16:00.", "partecipanti_titolo": "Le maison", "partecipanti": ["Agrapart Avize", "Barons de Rothschild", "Boizel", "Bollinger", "Delamotte", "Drappier", "Duval-Leroy", "Henriot", "Joseph Perrier", "Laurent-Perrier", "Leclerc Briant", "Louis Roederer", "Moët & Chandon", "Perrier-Jouët", "Philipponnat", "Piper-Heidsieck", "Pol Roger", "Ruinart", "Taittinger", "Veuve Clicquot"], "pdf": "eventi/Champagne_Forum_2026_programma.pdf", "evidenza_dal": "2026-10-19", "programma": [{"ora": "14:30", "etichetta": "", "titolo": "Registrazione ospiti", "relatori": [], "descrizione": ""}, {"ora": "15:00–15:15", "etichetta": "", "titolo": "Inizio lavori", "relatori": [], "descrizione": "Saluto della Magnifica Rettrice, Prof.ssa Valentina Garavaglia, e intervento di Marco Muggiano, Presidente IULM Alumni."}, {"ora": "15:15–15:20", "etichetta": "", "titolo": "Prof. Vincenzo Russo", "relatori": [], "descrizione": "Board delegato ai rapporti con le Imprese, Referente Associazione Mondo IULM, Direttore scientifico del Master Food and Wine Communication."}, {"ora": "15:20–16:20", "etichetta": "Panel 1", "titolo": "The human behind the myth / Physical and digital experience: brand personification and halo effect", "relatori": ["Charles Duval-Leroy · Champagne Duval-Leroy", "Fabrice Agrapart · Champagne Agrapart Avize", "Michel Drappier · Champagne Drappier", "Giuseppe Stigliano · Senior Advisor in Corporate Innovation, Leadership & Marketing"], "descrizione": "Moderano Chiara Giovoni e Marco Muggiano."}, {"ora": "16:20–16:30", "etichetta": "", "titolo": "Prof. Massimiliano Bruni", "relatori": [], "descrizione": "Board delegato ai rapporti con le Imprese, Referente IULM Communication School, Presidente del Board Scientifico IULM Communication School."}, {"ora": "16:30–16:40", "etichetta": "", "titolo": "Prof.ssa Daniela Corsaro", "relatori": [], "descrizione": ""}, {"ora": "16:40–17:45", "etichetta": "Panel 2", "titolo": "The new architecture of desire: AI, tech and emotions", "relatori": ["Vincent Chaperon · Chef de Caves Dom Pérignon", "Florent Roques-Boizel · Champagne Boizel", "Frédéric Mairesse · CEO Champagne Barons de Rothschild", "Nadia Carta · Google USA, Global Head of Agency", "Marzia Varvaglione · Présidente CEEV, Comité Européen des Entreprises Vins"], "descrizione": "Moderano Chiara Giovoni e Marco Muggiano."}, {"ora": "17:45–18:00", "etichetta": "", "titolo": "Question time", "relatori": [], "descrizione": ""}, {"ora": "18:00–20:00", "etichetta": "Degustazione", "titolo": "Introducing Excellence", "relatori": [], "descrizione": "Degustazione di circa 40 tipologie di Champagne: momento didattico e di approfondimento, parte integrante del percorso educational del Forum."}]}}]}, {"data": "2026-10-26", "lezioni": [{"data": "2026-10-26", "inizio": "09:30", "fine": "13:30", "titolo": "Come lavora un'agenzia con Wabisabi Studio + Divisione in agenzie + BRIEF 1° PW \"nome,logo, payoff\"", "tipo": "Project work", "modulo": "modulo-1", "persone": [], "organizzazioni": ["wabisabi-studio"], "altri": [], "luogo": "Aula 412 (Edificio IULM 4, 1° piano)", "dettaglio": "", "staff": true, "materiali": ""}, {"data": "2026-10-26", "inizio": "14:30", "fine": "18:30", "titolo": "Il sistema agroalimentare: il mondo del biologico, i nuovi trend e gli e-commerce del food", "tipo": "Lezione", "modulo": "modulo-1", "persone": ["alessandro-franceschini"], "organizzazioni": [], "altri": [], "luogo": "Aula 412 (Edificio IULM 4, 1° piano)", "dettaglio": "", "staff": false, "materiali": ""}]}, {"data": "2026-10-27", "lezioni": [{"data": "2026-10-27", "inizio": "09:30", "fine": "13:30", "titolo": "Il sistema agroalimentare: il mondo del biologico, i nuovi trend e gli e-commerce del food", "tipo": "Lezione", "modulo": "modulo-1", "persone": ["alessandro-franceschini"], "organizzazioni": [], "altri": [], "luogo": "Aula 412 (Edificio IULM 4, 1° piano)", "dettaglio": "", "staff": false, "materiali": ""}, {"data": "2026-10-27", "inizio": "14:30", "fine": "18:30", "titolo": "Introduzione al sistema agroalimentare attraverso i principi di storia della gastronomia e i nuovi confini del gusto", "tipo": "Lezione", "modulo": "modulo-1", "persone": ["gabriele-zanatta"], "organizzazioni": [], "altri": [], "luogo": "Aula 412 (Edificio IULM 4, 1° piano)", "dettaglio": "", "staff": false, "materiali": ""}]}, {"data": "2026-10-28", "lezioni": [{"data": "2026-10-28", "inizio": "09:30", "fine": "13:30", "titolo": "lavoro in aula", "tipo": "Project work", "modulo": "modulo-1", "persone": [], "organizzazioni": [], "altri": [], "luogo": "Aula 412 (Edificio IULM 4, 1° piano)", "dettaglio": "", "staff": true, "materiali": ""}, {"data": "2026-10-28", "inizio": "14:30", "fine": "18:30", "titolo": "Cultura del Team e Comunicazione interna", "tipo": "Lezione", "modulo": "modulo-1", "persone": ["stefano-cozzi"], "organizzazioni": [], "altri": [], "luogo": "Aula 412 (Edificio IULM 4, 1° piano)", "dettaglio": "", "staff": false, "materiali": ""}]}, {"data": "2026-10-29", "lezioni": [{"data": "2026-10-29", "inizio": "09:30", "fine": "13:30", "titolo": "Il sistema agroalimentare: il mondo del biologico, i nuovi trend e gli e-commerce del food", "tipo": "Testimonianza", "modulo": "modulo-1", "persone": ["alessandro-franceschini", "lorenzo-cafissi"], "organizzazioni": [], "altri": [], "luogo": "Aula 412 (Edificio IULM 4, 1° piano)", "dettaglio": "", "staff": false, "materiali": ""}, {"data": "2026-10-29", "inizio": "14:30", "fine": "18:30", "titolo": "Introduzione al sistema agroalimentare attraverso i principi di storia della gastronomia e i nuovi confini del gusto", "tipo": "Lezione", "modulo": "modulo-1", "persone": ["gabriele-zanatta"], "organizzazioni": [], "altri": [], "luogo": "Aula 412 (Edificio IULM 4, 1° piano)", "dettaglio": "", "staff": false, "materiali": ""}]}, {"data": "2026-11-02", "lezioni": [{"data": "2026-11-02", "inizio": "09:30", "fine": "13:30", "titolo": "Il sistema agroalimentare: Il mercato del Dop, IGP, STG, prodotti tradizionali e tipici", "tipo": "Lezione", "modulo": "modulo-1", "persone": ["alessandro-franceschini"], "organizzazioni": [], "altri": [], "luogo": "Aula 412 (Edificio IULM 4, 1° piano)", "dettaglio": "", "staff": false, "materiali": ""}, {"data": "2026-11-02", "inizio": "14:30", "fine": "18:30", "titolo": "Mangio dunque penso: fondamenti di antropologia del cibo e del vino", "tipo": "Lezione", "modulo": "modulo-1", "persone": ["franco-achilli"], "organizzazioni": [], "altri": [], "luogo": "Aula 412 (Edificio IULM 4, 1° piano)", "dettaglio": "", "staff": false, "materiali": ""}]}, {"data": "2026-11-03", "lezioni": [{"data": "2026-11-03", "inizio": "09:30", "fine": "13:30", "titolo": "Il sistema agroalimentare: Il rapporto tra produzione e ristorazione di qualità: strategie di sviluppo", "tipo": "Lezione", "modulo": "modulo-1", "persone": ["alessandro-franceschini", "luca-cuzziol", "silvano-brescianini"], "organizzazioni": [], "altri": [], "luogo": "Aula 412 (Edificio IULM 4, 1° piano)", "dettaglio": "", "staff": false, "materiali": ""}, {"data": "2026-11-03", "inizio": "14:30", "fine": "18:30", "titolo": "Feedback progetto individuale + BRIEF 2° PW di gruppo", "tipo": "Project work", "modulo": "modulo-1", "persone": ["massimiliano-freddi"], "organizzazioni": [], "altri": [], "luogo": "Aula 412 (Edificio IULM 4, 1° piano)", "dettaglio": "", "staff": false, "materiali": ""}]}, {"data": "2026-11-04", "lezioni": [{"data": "2026-11-04", "inizio": "09:00", "fine": "13:30", "titolo": "Lavoro sul progetto di gruppo", "tipo": "Project work", "modulo": "modulo-1", "persone": ["massimiliano-freddi"], "organizzazioni": [], "altri": [], "luogo": "Aula 412 (Edificio IULM 4, 1° piano)", "dettaglio": "", "staff": false, "materiali": ""}, {"data": "2026-11-04", "inizio": "14:30", "fine": "18:30", "titolo": "Lavoro sul progetto di gruppo", "tipo": "Project work", "modulo": "modulo-1", "persone": ["massimiliano-freddi"], "organizzazioni": [], "altri": [], "luogo": "Aula 412 (Edificio IULM 4, 1° piano)", "dettaglio": "", "staff": false, "materiali": ""}]}]}, {"id": "modulo-2", "numero": 2, "titolo": "Storia della gastronomia", "dal": "2026-11-05", "al": "2026-11-12", "pubblicato": true, "avvisi": [], "giorni": [{"data": "2026-11-05", "lezioni": [{"data": "2026-11-05", "inizio": "09:30", "fine": "13:30", "titolo": "Check delle agenzie sul 1° project work", "tipo": "Project work", "modulo": "modulo-2", "persone": [], "organizzazioni": [], "altri": [], "luogo": "Aula 412 (Edificio IULM 4, 1° piano)", "dettaglio": "", "staff": true, "materiali": ""}, {"data": "2026-11-05", "inizio": "14:30", "fine": "18:30", "titolo": "Il sistema della ristorazione attraverso l'esperienza di SAMPA", "tipo": "Lezione", "modulo": "modulo-2", "persone": ["enrico-vignoli"], "organizzazioni": [], "altri": [], "luogo": "Aula 412 (Edificio IULM 4, 1° piano)", "dettaglio": "", "staff": false, "materiali": ""}]}, {"data": "2026-11-09", "lezioni": [{"data": "2026-11-09", "inizio": "09:30", "fine": "13:30", "titolo": "Chi decide cosa è buono. Storia della gastronomia attraverso la critica, le guide e i media", "tipo": "Lezione", "modulo": "modulo-2", "persone": ["federico-de-cesare-viola"], "organizzazioni": ["identita-golose"], "altri": [], "luogo": "Aula 412 (Edificio IULM 4, 1° piano)", "dettaglio": "", "staff": false, "materiali": ""}, {"data": "2026-11-09", "inizio": "14:30", "fine": "18:30", "titolo": "Chi decide cosa è buono. Storia della gastronomia attraverso la critica, le guide e i media", "tipo": "Lezione", "modulo": "modulo-2", "persone": ["federico-de-cesare-viola"], "organizzazioni": ["identita-golose"], "altri": [], "luogo": "Aula 412 (Edificio IULM 4, 1° piano)", "dettaglio": "", "staff": false, "materiali": ""}]}, {"data": "2026-11-10", "lezioni": [{"data": "2026-11-10", "inizio": "09:30", "fine": "13:30", "titolo": "Presentazione 1° PW \"Nome logo e pay off\" con VOTO", "tipo": "Project work", "modulo": "modulo-2", "persone": [], "organizzazioni": ["wabisabi-studio"], "altri": [], "luogo": "Aula 412 (Edificio IULM 4, 1° piano)", "dettaglio": "", "staff": true, "materiali": ""}, {"data": "2026-11-10", "inizio": "14:30", "fine": "18:30", "titolo": "Il valore del Genius loci: luoghi, paesaggi, comunità", "tipo": "Lezione", "modulo": "modulo-2", "persone": ["franco-achilli"], "organizzazioni": [], "altri": [], "luogo": "Aula 412 (Edificio IULM 4, 1° piano)", "dettaglio": "", "staff": false, "materiali": ""}]}, {"data": "2026-11-11", "lezioni": [{"data": "2026-11-11", "inizio": "09:30", "fine": "13:30", "titolo": "Il sistema agroalimentare: Il rapporto tra produzione e ristorazione di qualità: strategie di sviluppo", "tipo": "Lezione", "modulo": "modulo-2", "persone": ["alessandro-franceschini", "andrea-fedrizzi"], "organizzazioni": ["vitavigor", "cortilia"], "altri": [], "luogo": "Aula 412 (Edificio IULM 4, 1° piano)", "dettaglio": "", "staff": false, "materiali": ""}, {"data": "2026-11-11", "inizio": "14:30", "fine": "18:30", "titolo": "Il sistema agroalimentare: Il rapporto tra produzione e ristorazione di qualità: strategie di sviluppo", "tipo": "Lezione", "modulo": "modulo-2", "persone": ["alessandro-franceschini", "andrea-fedrizzi"], "organizzazioni": ["vitavigor", "cortilia"], "altri": [], "luogo": "Aula 412 (Edificio IULM 4, 1° piano)", "dettaglio": "", "staff": false, "materiali": ""}]}, {"data": "2026-11-12", "lezioni": [{"data": "2026-11-12", "inizio": "09:30", "fine": "13:30", "titolo": "Excursus, evoluzione e tendenze della cucina italiana", "tipo": "Lezione", "modulo": "modulo-2", "persone": ["gabriele-zanatta"], "organizzazioni": [], "altri": [], "luogo": "Aula 412 (Edificio IULM 4, 1° piano)", "dettaglio": "", "staff": false, "materiali": ""}, {"data": "2026-11-12", "inizio": "14:30", "fine": "18:30", "titolo": "Test sistema agroalimentare con VOTO", "tipo": "Verifica", "modulo": "modulo-2", "persone": ["alessandro-franceschini"], "organizzazioni": [], "altri": [], "luogo": "Aula 412 (Edificio IULM 4, 1° piano)", "dettaglio": "", "staff": false, "materiali": ""}]}]}, {"id": "modulo-3", "numero": 3, "titolo": "Food & Wine marketing", "dal": "2026-11-16", "al": "2026-11-18", "pubblicato": false}, {"id": "laboratorio-1", "numero": null, "titolo": "Laboratorio · Neuromarketing", "dal": "2026-11-19", "al": "2026-11-27", "pubblicato": false}, {"id": "modulo-4", "numero": 4, "titolo": "Food & Wine advertising", "dal": "2026-11-30", "al": "2026-12-11", "pubblicato": false}, {"id": "modulo-5", "numero": 5, "titolo": "Food & Wine and mass media", "dal": "2026-12-14", "al": "2027-01-19", "pubblicato": false}, {"id": "modulo-6", "numero": 6, "titolo": "Gli eventi enogastronomici ed il ruolo delle PR", "dal": "2027-01-20", "al": "2027-02-01", "pubblicato": false}, {"id": "modulo-7", "numero": 7, "titolo": "Critica ed editoria gastronomica", "dal": "2027-02-02", "al": "2027-02-12", "pubblicato": false}, {"id": "modulo-8", "numero": 8, "titolo": "Il mondo del vino", "dal": "2027-02-15", "al": "2027-04-13", "pubblicato": false}], "persone": {"alessandro-franceschini": {"nome": "Alessandro Franceschini", "ruolo": "Giornalista enogastronomico", "organizzazione": "", "bio": "Racconta vino e cibo da giornalista: scrive di vino, grande distribuzione e ortofrutta, cura il sito e la rivista di AIS Lombardia e co-cura la fiera Autochtona. Collabora con Myfruit, L’Informatore Agrario e le pagine GazzaGolosa della Gazzetta dello Sport; ha diretto la redazione di Lavinium.com e collaborato alla guida ristoranti del Touring Club e alla guida vini dell’Espresso. Insegna in diversi master della IULM e nel Modulo 1 guida gli studenti nel sistema agroalimentare.", "link": [{"etichetta": "Articoli su Lavinium", "url": "https://www.lavinium.it/author/alessandro-franceschini/"}], "cv": "", "foto": "", "verificare": false}, "andrea-fedrizzi": {"nome": "Andrea Fedrizzi", "ruolo": "Direttore marketing del Consorzio Melinda", "organizzazione": "melinda", "bio": "Nato e cresciuto in Val di Non, lavora in Melinda da oltre vent'anni e guida il marketing e la comunicazione del consorzio. È laureato in Economia e commercio all'Università di Trento.", "link": [{"etichetta": "Intervista su Easy4Green", "url": "https://easy4green.it/interviste/melinda/"}], "cv": "", "foto": "", "verificare": false}, "beatrice-reggiani": {"nome": "Beatrice Reggiani", "ruolo": "Ospite", "organizzazione": "", "bio": "Ospite dell'evento di apertura Food Talks.", "link": [], "cv": "", "foto": "", "verificare": true}, "carla-icardi": {"nome": "Carla Icardi", "ruolo": "Food editor", "organizzazione": "", "bio": "Food editor, laureata in Architettura al Politecnico di Milano. Ha diretto il settore food di Reed Business Information e la rivista Italian Gourmet, ed è stata direttrice dei progetti food di MN Holding. In televisione ha affiancato Alessandro Borghese come giudice di Kitchen Duel su Sky Uno. In aula racconta come il cibo diventa televisione, dalla costruzione del talent al coinvolgimento delle aziende.", "link": [], "cv": "", "foto": "", "verificare": false}, "enrico-vignoli": {"nome": "Enrico Vignoli", "ruolo": "Consulente per la ristorazione, co-fondatore di Postrivoro", "organizzazione": "osteria-francescana", "bio": "Dal 2007 lavora con l’Osteria Francescana di Massimo Bottura, prima in cucina e poi nello sviluppo dell’ufficio dell’Osteria. Ha co-fondato il progetto gastronomico Postrivoro, è consulente per locali, istituzioni e agenzie e dal 2015 cura la sezione food dell’evento Al Mèni a Rimini.", "link": [{"etichetta": "Profilo su Innesti", "url": "https://www.innesti.com/tag_inglese/enrico-vignoli/"}], "cv": "", "foto": "", "verificare": false}, "fabiola-fiorentino": {"nome": "Fabiola Fiorentino", "ruolo": "Guide de l'Espresso", "organizzazione": "", "bio": "Ospite dell'evento di apertura Food Talks. Nel Modulo 2 racconta la storia delle guide de l'Espresso.", "link": [], "cv": "", "foto": "", "verificare": true}, "federico-de-cesare-viola": {"nome": "Federico De Cesare Viola", "ruolo": "Giornalista, direttore di Food and Wine Italia", "organizzazione": "", "bio": "Giornalista romano di enogastronomia e viaggi, è direttore responsabile di Food and Wine Italia. Ha scritto per Il Sole 24 Ore, La Repubblica e L'Uomo Vogue. Insegna all'Università IULM e tiene corsi di Food Media per college americani.", "link": [{"etichetta": "Autori di Identità Golose", "url": "https://www.identitagolose.it/sito/it/412/390/autori/federico-de-cesare-viola.html"}, {"etichetta": "Food and Wine Italia", "url": "https://www.foodandwineitalia.com"}], "cv": "", "foto": "", "verificare": false}, "franco-achilli": {"nome": "Franco Achilli", "ruolo": "Architetto e brand designer, docente IULM", "organizzazione": "universita-iulm", "bio": "Progetta l’identità visiva delle marche: con Guglielmo Ghizzardi dirige lo studio A+G Achilli Ghizzardi Associati (brand design, grafica editoriale, corporate identity e allestimenti), con oltre 150 marchi progettati. Architetto laureato al Politecnico di Milano, insegna Identità visiva della marca alla IULM e ha insegnato alla NABA e al Master in Publishing dell’Università degli Studi di Milano. Nel master legge il Made in Italy attraverso i distretti e le comunità produttive.", "link": [{"etichetta": "Profilo IULM", "url": "https://www.iulm.it/en/iulm/ateneo/docenti-e-collaboratori/Achilli-Franco"}], "cv": "", "foto": "", "verificare": false}, "gabriele-zanatta": {"nome": "Gabriele Zanatta", "ruolo": "Giornalista e storico della gastronomia", "organizzazione": "identita-golose", "bio": "Racconta la cucina d’autore: giornalista, coordina la Guida ai Ristoranti di Identità Golose e firma la rubrica “Zanattamente Buono”. Laureato in Filosofia, insegna storia della gastronomia in istituti e università ed è co-autore di “Cracco in Galleria” (Phaidon / L’ippocampo) e “Cucina Milanese Contemporanea” (Guido Tommasi).", "link": [{"etichetta": "Autori di Identità Golose", "url": "https://www.identitagolose.it/sito/it/211/gli-autori.html"}], "cv": "", "foto": "", "verificare": false}, "gesualdo-vercio": {"nome": "Gesualdo Vercio", "ruolo": "Ospite", "organizzazione": "", "bio": "Ospite dell'evento di apertura Food Talks.", "link": [], "cv": "", "foto": "", "verificare": true}, "lorenzo-cafissi": {"nome": "Lorenzo Cafissi", "ruolo": "Direttore beverage, NewPrinces – Carrefour Italia", "organizzazione": "", "bio": "Si occupa del beverage per NewPrinces, il gruppo alimentare che ha acquisito Carrefour Italia. In aula porta il punto di vista della grande distribuzione.", "link": [], "cv": "", "foto": "", "verificare": false}, "luca-cuzziol": {"nome": "Luca Cuzziol", "ruolo": "Titolare, Cuzziol Grandivini", "organizzazione": "cuzziol-grandivini", "bio": "Guida Cuzziol Grandivini, azienda che distribuisce vini italiani e internazionali di qualità a ristoranti ed enoteche. In aula racconta il rapporto tra produzione e ristorazione.", "link": [], "cv": "", "foto": "", "verificare": false}, "marco-muggiano": {"nome": "Marco Muggiano", "ruolo": "Business development e comunicazione, Slowear", "organizzazione": "slowear", "bio": "Porta in aula un caso di incontro tra food e moda: in Slowear, gruppo italiano dell’abbigliamento, guida lo sviluppo del business e la comunicazione dei marchi, anche sui mercati internazionali. Con gli studenti approfondisce le operazioni di co-marketing tra i due settori.", "link": [], "cv": "", "foto": "", "verificare": false}, "marco-sutter": {"nome": "Marco Sutter", "ruolo": "Ospite", "organizzazione": "", "bio": "Ospite del master sul tema food e hospitality: le nuove frontiere del settore e il ruolo della longevity. Interviene anche all’evento di apertura Food Talks.", "link": [], "cv": "", "foto": "", "verificare": true}, "maria-novella-valenti": {"nome": "Maria Novella Valenti", "ruolo": "Ospite", "organizzazione": "", "bio": "Ospite dell'evento di apertura Food Talks.", "link": [], "cv": "", "foto": "", "verificare": true}, "marina-potassa": {"nome": "Marina Potassa", "ruolo": "Guide de l'Espresso", "organizzazione": "", "bio": "Ospite dell'evento di apertura Food Talks. Nel Modulo 2 racconta la storia delle guide de l'Espresso.", "link": [], "cv": "", "foto": "", "verificare": true}, "massimiliano-freddi": {"nome": "Massimiliano Freddi", "ruolo": "Docente di Marketing ed Experience Design", "organizzazione": "universita-iulm", "bio": "Esperto di marketing dell’esperienza: professore a contratto di Marketing ed Experience Design alla IULM e CEO di Wonderwood, parco avventura fondato nel 2018. È stato general manager e vicepresidente dello sviluppo strategico di Leolandia e responsabile marketing e ufficio stampa per il mercato italiano di Disneyland Paris; dal 2016 è coach dell’altMBA di Seth Godin. Nel master introduce il marketing del food e segue i project work.", "link": [{"etichetta": "Profilo IAAPA", "url": "https://iaapa.org/speaker/massimiliano-freddi-2"}], "cv": "", "foto": "", "verificare": false}, "massimo-bustreo": {"nome": "Massimo Bustreo", "ruolo": "Docente IULM, formatore e coach", "organizzazione": "universita-iulm", "bio": "Insegna a comunicare e a lavorare in gruppo: alla IULM tiene i corsi di Psicologia del turismo, Psicologia della comunicazione audiovisiva, Public speaking e Scrittura professionale, ed è formatore e coach certificato ICF e AICP su comunicazione, leadership e gestione dei gruppi. Ha un dottorato in Human Interactions (IULM, in cotutela con l’Université de Picardie Jules Verne). Nel master apre il percorso con l’ice breaking.", "link": [{"etichetta": "Profilo IULM", "url": "https://www.iulm.it/en/iulm/ateneo/docenti-e-collaboratori/bustreo-massimo"}], "cv": "", "foto": "", "verificare": false}, "maurizio-trezzi": {"nome": "Maurizio Trezzi", "ruolo": "Giornalista, fondatore di StrategyCom", "organizzazione": "universita-iulm", "bio": "Comunica cibo, vino e distillati da giornalista e da imprenditore: ha fondato e dirige l’agenzia di brand communication StrategyCom e scrive anche per Identità Golose. Giornalista professionista e laureato in Fisica, insegna alla IULM dal 2008, anche nei master in Food & Wine Communication e Sport Communication, ed è commentatore televisivo sportivo dal 1997.", "link": [{"etichetta": "Profilo IULM", "url": "https://www.iulm.it/en/iulm/ateneo/docenti-e-collaboratori/Trezzi-Maurizio"}], "cv": "", "foto": "", "verificare": false}, "silvano-brescianini": {"nome": "Silvano Brescianini", "ruolo": "CEO, Barone Pizzini", "organizzazione": "barone-pizzini", "bio": "Guida Barone Pizzini, cantina della Franciacorta tra le pioniere del biologico, ed è stato eletto presidente del Consorzio Franciacorta nel 2018. In aula racconta il rapporto tra produzione e ristorazione di qualità.", "link": [], "cv": "", "foto": "", "verificare": false}, "stefano-cozzi": {"nome": "Stefano Cozzi", "ruolo": "Formatore e coach", "organizzazione": "", "bio": "Formatore e coach. Nel Modulo 1 tiene l'incontro sulla cultura del team e sulla comunicazione interna.", "link": [], "cv": "", "foto": "", "verificare": true}, "tiziana-formisano": {"nome": "Tiziana Formisano", "ruolo": "Ospite", "organizzazione": "", "bio": "Ospite dell'evento di apertura Food Talks.", "link": [], "cv": "", "foto": "", "verificare": true}, "vincenzo-russo": {"nome": "Vincenzo Russo", "ruolo": "Direttore scientifico del master", "organizzazione": "universita-iulm", "bio": "Dirige il master in Food and Wine Communication dal 2012. Professore ordinario di Psicologia dei consumi e Neuromarketing alla IULM, ha fondato e dirige il Centro di Ricerca di Neuromarketing “Behavior and Brain Lab” e ha guidato anche i master in Food Design and Innovation e in Sport Communication. Tra i suoi libri, “Neuroscienze a tavola” e “Neuroselling”.", "link": [{"etichetta": "Profilo IGCAT", "url": "https://igcat.org/team/vincenzo-russo-phd-italy/"}], "cv": "", "foto": "", "verificare": false}}, "organizzazioni": {"barone-pizzini": {"nome": "Barone Pizzini", "descrizione": "Cantina della Franciacorta tra le prime a scegliere la viticoltura biologica.", "sito": "https://www.baronepizzini.it"}, "cortilia": {"nome": "Cortilia", "descrizione": "Food tech fondata nel 2012 da Marco Porcaro: un mercato agricolo online che collega i consumatori con agricoltori, allevatori e produttori artigianali. Consegna la spesa a domicilio, di solito entro 24 ore, con ordini singoli o in abbonamento, in Lombardia, Piemonte ed Emilia-Romagna.", "sito": "https://www.cortilia.it"}, "cuzziol-grandivini": {"nome": "Cuzziol Grandivini", "descrizione": "Azienda di distribuzione di vini italiani e internazionali di qualità per ristoranti ed enoteche.", "sito": "https://www.cuzziolgrandivini.it"}, "identita-golose": {"nome": "Identità Golose", "descrizione": "Progetto editoriale e di eventi sulla cucina d'autore fondato nel 2004 dal giornalista Paolo Marchi. Organizza il congresso internazionale Identità Milano, pubblica un web magazine e una guida annuale ai ristoranti d'autore in Italia e nel mondo, e premia i giovani chef.", "sito": "https://www.identitagolose.it"}, "melinda": {"nome": "Melinda", "descrizione": "Consorzio dei produttori di mele della Val di Non, in Trentino, che riunisce circa 4.000 famiglie di coltivatori. Oltre alle mele, anche biologiche, produce snack e prodotti al 100% di frutta.", "sito": "https://www.melinda.it"}, "osteria-francescana": {"nome": "Osteria Francescana", "descrizione": "Ristorante di Massimo Bottura a Modena, tre stelle Michelin, primo nella classifica The World's 50 Best Restaurants nel 2016 e nel 2018.", "sito": "https://osteriafrancescana.it"}, "slowear": {"nome": "Slowear", "descrizione": "Gruppo italiano di abbigliamento che riunisce i marchi Incotex, Glanshirt, Montedoro e Zanone, con un'idea di moda durevole.", "sito": "https://www.slowear.com"}, "universita-iulm": {"nome": "Università IULM", "descrizione": "Università di Milano dedicata alla comunicazione, alle lingue, al turismo e alle arti. Sede del master in Food and Wine Communication.", "sito": "https://www.iulm.it"}, "vitavigor": {"nome": "Vitavigor", "descrizione": "Grissinificio a conduzione familiare fondato nel 1958 a Cinisello Balsamo, alle porte di Milano. Produce grissini e sostitutivi del pane con olio extravergine d'oliva.", "sito": "https://www.vitavigor.com"}, "wabisabi-studio": {"nome": "Wabisabi Studio", "descrizione": "Agenzia di comunicazione. Nel Modulo 1 mostra agli studenti come lavora un'agenzia, dal brief al progetto.", "sito": ""}}, "avvisi": [{"id": "2026-10-19-benvenuti-nel-calendario-del-master", "data": "2026-10-19", "fino": "2026-10-31", "titolo": "Benvenuti nel calendario del master", "testo": "Qui trovi orari, docenti e ospiti di ogni modulo. La pagina si aggiorna quando cambia il programma: controllala prima di ogni lezione e attiva l’aggiunta automatica al tuo calendario.", "importante": false, "link": null}], "firma": "cbd355849aed22cd", "aggiornamenti": [{"tipo": "calendario", "firma": "cbd355849aed22cd", "quando": "2026-10-30T17:04"}, {"tipo": "modulo", "id": "modulo-2", "quando": "2026-10-27T17:58"}, {"tipo": "calendario", "firma": "ded07acb03e7df6a", "quando": "2026-10-26T12:26"}]};
+
+/* ---------- utilità ---------- */
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const ico = (id, cls = "ico") => `<svg class="${cls}" aria-hidden="true"><use href="#i-${id}"/></svg>`;
+const parse = iso => { const [y, m, d] = iso.split("-").map(Number); return new Date(y, m - 1, d); };
+const fmt = (iso, o) => parse(iso).toLocaleDateString("it-IT", o);
+const ini = n => n.split(/\s+/).filter(Boolean).filter(w => /^[A-ZÀ-Ý]/.test(w)).map(w => w[0]).slice(0, 2).join("").toUpperCase() || n.slice(0, 2).toUpperCase();
+const norm = s => String(s || "").normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
+const store = {
+  get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } },
+  set(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+};
+function adesso() {
+  const forzata = new URLSearchParams(location.search).get("oggi"); // per prove: ?oggi=2026-10-26T15:00
+  return forzata ? new Date(forzata) : new Date();
+}
+const isoDi = d => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+const quando = (iso, hhmm) => { const d = parse(iso); const [h, m] = (hhmm || "00:00").split(":").map(Number); d.setHours(h, m); return d; };
+const giorniTra = (a, b) => Math.round((parse(isoDi(b)) - parse(isoDi(a))) / 864e5);
+const piu = (iso, n) => { const d = parse(iso); d.setDate(d.getDate() + n); return isoDi(d); };
+const riduci = m => m.charAt(0).toUpperCase() + m.slice(1);
+
+/* ---------- tipi di incontro: colori ---------- */
+const TIPI = {
+  "Lezione": ["--t-lezione", "--t-lezione-bg"],
+  "Testimonianza": ["--t-ospite", "--t-ospite-bg"],
+  "Project work": ["--t-pw", "--t-pw-bg"],
+  "Workshop": ["--t-lab", "--t-lab-bg"],
+  "Evento": ["--t-evento", "--t-evento-bg"],
+  "Visita": ["--t-evento", "--t-evento-bg"],
+  "Verifica": ["--t-pw", "--t-pw-bg"]
+};
+const stileTipo = t => { const [c, b] = TIPI[t] || TIPI.Lezione; return `--c:var(${c});--cb:var(${b})`; };
+
+/* ---------- dati derivati ---------- */
+const pubblicati = D.moduli.filter(m => m.pubblicato);
+const tutte = pubblicati.flatMap(m => m.giorni.flatMap(g => g.lezioni.map(l => ({ ...l, mod: m }))));
+const nomeModulo = m => m.id === "presentazione" ? "Apertura" : m.numero ? `Modulo ${m.numero}` : m.id.startsWith("laboratorio") ? "Laboratorio" : "Modulo";
+const breve = m => m.id === "presentazione" ? "Apertura" : m.numero ? `Modulo ${m.numero}` : m.id.startsWith("laboratorio") ? "Laboratorio" : "Extra";
+const intervallo = m => m.dal ? `${fmt(m.dal, { day: "numeric", month: "short" })} – ${fmt(m.al, { day: "numeric", month: "short" })}` : "";
+const testoRicerca = l => norm([l.titolo, l.tipo, l.luogo, ...l.altri,
+  ...l.persone.map(p => D.persone[p]?.nome), ...l.organizzazioni.map(o => D.organizzazioni[o]?.nome),
+  ...l.persone.map(p => D.organizzazioni[D.persone[p]?.organizzazione]?.nome)].join(" "));
+
+/* ---------- stato ---------- */
+const stato = { modulo: null, tab: "cal", q: "", tipi: new Set(), cerca: false, filtra: false, eventi: new Set(), archivio: false };
+function moduloIniziale() {
+  const h = location.hash.slice(1);
+  if (D.moduli.some(m => m.id === h)) return h;
+  const t = isoDi(adesso());
+  const m = pubblicati.find(m => m.dal <= t && t <= m.al) || pubblicati.find(m => m.dal >= t);
+  if (m) return m.id;
+  return (pubblicati[pubblicati.length - 1] || D.moduli[0]).id;
+}
+
+/* ---------- link Google Calendar ---------- */
+function linkGoogle(l) {
+  const d = l.data.replace(/-/g, ""), a = l.inizio.replace(":", "") + "00", b = l.fine.replace(":", "") + "00";
+  const nomi = [...l.persone.map(p => D.persone[p]?.nome), ...l.organizzazioni.map(o => D.organizzazioni[o]?.nome), ...l.altri].filter(Boolean);
+  const p = new URLSearchParams({
+    action: "TEMPLATE", text: l.titolo, dates: `${d}T${a}/${d}T${b}`, ctz: "Europe/Rome",
+    details: `Master ${D.master.titolo_master}${nomi.length ? "\nCon: " + nomi.join(", ") : ""}`,
+    location: l.luogo || "Università IULM, Milano"
+  });
+  return "https://calendar.google.com/calendar/render?" + p.toString();
+}
+
+/* ============================ AVVISI ============================ */
+/* Scritti dallo staff nel foglio Avvisi di anagrafica.xlsx. Si aprono dalla
+   campanella; quelli "importanti" compaiono anche in evidenza in cima alla pagina.
+   Ogni avviso appare dalla sua data e sparisce dopo "Visibile fino al". */
+/* Avvisi automatici:
+   - «Calendario aggiornato»: quando cambiano le lezioni visibili (rilevato a ogni pubblicazione), per 7 giorni;
+     gli aggiornamenti precedenti (ultimi 30 giorni) restano nello storico come già letti.
+   - «Novità»: presentazione delle nuove funzioni dell'app, scritte qui con la loro scadenza. */
+const NOVITA = [
+  { id: "novita-guida-campus", data: "2026-10-22", fino: "2026-11-12", titolo: "Novità: la guida al campus",
+    testo: "Mappa ufficiale e indicazioni per raggiungere ogni edificio. La trovi sotto il percorso dei moduli; nelle lezioni basta toccare il nome dell’aula.",
+    link: { etichetta: "Apri la guida", url: "#campus" } }
+];
+// articolo davanti al nome del modulo: «il Modulo 2», «l'Apertura», «il Laboratorio»
+const conArticolo = m => { const n = nomeModulo(m); return n === "Apertura" ? "l’Apertura" : "il " + n; };
+const conclus = m => nomeModulo(m) === "Apertura" ? "conclusa" : "concluso";
+const piuGiorni = (iso, n) => { const d = parse(iso); d.setDate(d.getDate() + n); return isoDi(d); };
+function avvisiAutomatici() {
+  const ora = adesso(), oggi = isoDi(ora), out = [];
+  // dagli eventi registrati a ogni pubblicazione: calendario cambiato, nuovo modulo pubblicato
+  let primoCal = true;
+  (D.aggiornamenti || []).forEach(u => {
+    const giorni = (ora - new Date(u.quando)) / 864e5;
+    if (!(giorni >= 0 && giorni <= 30)) return;
+    const quando = `${fmt(u.quando.slice(0, 10), { weekday: "long", day: "numeric", month: "long" })} alle ${u.quando.slice(11, 16)}`;
+    const base = { data: u.quando.slice(0, 10), ora: u.quando.slice(11, 16) };
+    if ((u.tipo || "calendario") === "calendario") {
+      const recente = primoCal && giorni <= 7; primoCal = false;
+      out.push({ ...base, id: "calendario-" + u.firma, tipo: "Calendario", titolo: "Calendario aggiornato",
+        testo: `Il calendario è stato aggiornato ${quando}. Controlla orari e aule delle prossime lezioni.`, evidenza: recente, storico: !recente });
+    } else if (u.tipo === "modulo") {
+      const m = D.moduli.find(x => x.id === u.id && x.pubblicato); if (!m) return;
+      const recente = giorni <= 7;
+      out.push({ ...base, id: "pubblicato-" + m.id, tipo: "Moduli", titolo: `Pubblicato ${conArticolo(m)}`,
+        testo: `${nomeModulo(m)} · ${m.titolo}${m.dal ? ` (${intervallo(m)})` : ""}. Trovi lezioni, docenti e aule.`,
+        link: { etichetta: "Vai al modulo", url: "#" + m.id }, evidenza: recente, storico: !recente });
+    }
+  });
+  // dalle date dei moduli: inizio (3 giorni prima) e fine (nei 5 giorni successivi)
+  const ordinati = D.moduli.filter(m => m.dal).sort((x, y) => x.dal.localeCompare(y.dal));
+  ordinati.forEach((m, i) => {
+    if (m.pubblicato && m.giorni && m.giorni.length && piuGiorni(m.dal, -3) <= oggi && oggi <= m.dal) {
+      const l = m.giorni[0].lezioni[0] || {}, aula = (l.luogo || "").split(" (")[0];
+      const quando = m.dal === oggi ? "Oggi" : m.dal === piuGiorni(oggi, 1) ? "Domani" : maiuscola(fmt(m.dal, { weekday: "long", day: "numeric", month: "long" }));
+      out.push({ id: "inizio-" + m.id, data: piuGiorni(m.dal, -3), tipo: "Moduli", titolo: `${quando} inizia ${conArticolo(m)}`,
+        testo: `${m.titolo}.${l.inizio ? ` Prima lezione alle ${l.inizio.replace(/^0/, "")}${aula ? ` in ${aula}` : ""}.` : ""}`,
+        link: { etichetta: "Vai al modulo", url: "#" + m.id }, evidenza: m.dal > oggi });
+    }
+    if (m.pubblicato && m.al && m.al < oggi && oggi <= piuGiorni(m.al, 5)) {
+      const dopo = ordinati.slice(i + 1).find(x => x.dal > m.al);
+      out.push({ id: "fine-" + m.id, data: piuGiorni(m.al, 1), tipo: "Moduli", titolo: `Si è ${conclus(m)} ${conArticolo(m)}`,
+        testo: `${m.titolo}. Le lezioni restano consultabili nell’archivio del modulo.${dopo ? ` Il prossimo è ${conArticolo(dopo)} · ${dopo.titolo}, dal ${fmt(dopo.dal, { day: "numeric", month: "long" })}.` : ""}`,
+        link: dopo && dopo.pubblicato ? { etichetta: "Vai al prossimo modulo", url: "#" + dopo.id } : null });
+    }
+  });
+  return out;
+}
+function avvisiAttivi() {
+  const oggi = isoDi(adesso());
+  const novita = NOVITA.map(a => ({ ...a, tipo: "Novità", evidenza: true }));
+  return (D.avvisi || []).concat(novita, avvisiAutomatici())
+    .filter(a => (!a.data || a.data <= oggi) && (!a.fino || a.fino >= oggi))
+    .sort((a, b) => (!!b.importante - !!a.importante) || (b.data || "").localeCompare(a.data || "") || (b.ora || "").localeCompare(a.ora || ""));
+}
+const letti = () => { try { return new Set(JSON.parse(store.get("fw-letti") || "[]")); } catch (e) { return new Set(); } };
+function segnaLetti(ids) { const s = letti(); ids.forEach(i => s.add(i)); store.set("fw-letti", JSON.stringify([...s].slice(-300))); }
+const daLeggere = (a, s) => !a.storico && !s.has(a.id);
+function aggiornaContatori() {
+  const s = letti(), n = avvisiAttivi().filter(a => daLeggere(a, s)).length;
+  $("#bell-n").hidden = !n; $("#bell-n").textContent = n;
+  $("#bell").setAttribute("aria-label", n ? `Avvisi, ${n} da leggere` : "Avvisi");
+  renderAlert();
+}
+// link interni degli avvisi: evento, guida al campus, scheda di un edificio
+function linkAvviso(a, bottone) {
+  const u = a.link.url, e = esc(a.link.etichetta), id = esc(a.id);
+  const ed = u.match(/^#come-arrivare-iulm-(\d)$/);
+  const mod = D.moduli.find(m => "#" + m.id === u && m.pubblicato);
+  const attr = u.startsWith("#evento-") ? `data-apri-ev="${esc(u.slice(8))}"` : u === "#campus" ? "data-campus" : ed ? `data-ed-apri="IULM ${ed[1]}"` : mod ? `data-avv-mod="${esc(mod.id)}"` : "";
+  if (bottone) return attr ? `<button ${attr} data-letto="${id}">${e}</button>` : `<button data-leggi>Leggi</button>`;
+  return attr ? `<a href="${esc(u)}" ${attr} data-letto="${id}">${e} →</a>` : `<a href="${esc(u)}" target="_blank" rel="noopener">${e} ↗</a>`;
+}
+// priorità del banner: avvisi importanti dello staff, calendario aggiornato, modulo pubblicato, inizio modulo, novità
+const prioritaBanner = a => a.importante ? 0 : a.tipo === "Calendario" ? 1 : /^pubblicato-/.test(a.id) ? 2 : /^inizio-/.test(a.id) ? 3 : a.tipo === "Novità" ? 4 : 5;
+const sessione = { get: k => { try { return sessionStorage.getItem(k); } catch (e) { return null; } }, set: (k, v) => { try { sessionStorage.setItem(k, v); } catch (e) {} } };
+function renderAlert() {
+  const s = letti();
+  let a = avvisiAttivi().filter(x => (x.importante || x.evidenza) && daLeggere(x, s)).sort((x, y) => prioritaBanner(x) - prioritaBanner(y))[0];
+  // un solo banner per visita: chiuso quello, gli altri restano nella campanella
+  const visto = sessione.get("fw-banner");
+  if (a && visto && visto !== a.id) a = null; else if (a) sessione.set("fw-banner", a.id);
+  const azione = !a ? "" : a.link ? linkAvviso(a, true) : a.tipo === "Calendario" ? `<button data-chiudi-avviso="${esc(a.id)}">Ho capito</button>` : `<button data-leggi>Leggi</button>`;
+  $("#alert-slot").innerHTML = a ? `<div class="alert${a.importante ? "" : " info"}" role="status">${ico(a.importante ? "alert" : a.tipo === "Novità" ? "pin" : a.tipo === "Moduli" ? "archive" : "today")}<div><b>${esc(a.titolo)}</b>${a.testo ? `<p>${esc(a.testo)}</p>` : ""}</div>
+    <div class="acts">${azione}<button class="x" data-chiudi-avviso="${esc(a.id)}" aria-label="Nascondi avviso">×</button></div></div>` : "";
+}
+function apriAvvisi() {
+  const lista = avvisiAttivi(), s = letti();
+  const voce = (a, nuovo) => `<article class="nitem ${a.importante ? "imp" : ""}">
+      <div class="nmeta">${nuovo ? `<span class="pill new">Nuovo</span>` : ""}${a.importante ? `<span class="pill imp">Importante</span>` : ""}${a.tipo && !norm(a.titolo).includes(norm(a.tipo)) ? `<span class="pill auto">${esc(a.tipo)}</span>` : ""}${a.data && a.tipo !== "Calendario" ? `<span>${esc(fmt(a.data, { day: "numeric", month: "long" }))}${a.ora ? ` · ${esc(a.ora)}` : ""}</span>` : ""}</div>
+      <h3>${esc(a.titolo)}</h3>
+      ${a.testo ? `<p>${esc(a.testo)}</p>` : ""}
+      ${a.link ? `<div class="links">${linkAvviso(a, false)}</div>` : ""}
+    </article>`;
+  const nuovi = lista.filter(a => daLeggere(a, s)), precedenti = lista.filter(a => !daLeggere(a, s));
+  const corpo = lista.length
+    ? `<h3 class="nsez">Nuovi</h3>` + (nuovi.length ? `<div class="news">${nuovi.map(a => voce(a, true)).join("")}</div>` : `<p class="note">Nessun avviso nuovo: sei in pari.</p>`) +
+      (precedenti.length ? `<h3 class="nsez">Precedenti</h3><div class="news old">${precedenti.map(a => voce(a, false)).join("")}</div>` : "")
+    : `<p class="note">Nessun avviso al momento. Quando ci sarà qualcosa di importante, vedrai un numero sulla campanella.</p>`;
+  apri(`<div class="p-head"><span class="mono" aria-hidden="true">${ico("bell")}</span><div><h2 id="p-name">Avvisi</h2><div class="rl">Comunicazioni dello staff e aggiornamenti del calendario</div></div></div>${corpo}`);
+  segnaLetti(lista.map(a => a.id));
+  aggiornaContatori();
+}
+
+/* ============================ FASCIA ============================ */
+function renderHero() {
+  const logo = D.master.logo ? `<img class="brandlogo" src="${D.master.logo}" alt="${esc(D.master.logo_alt || "Logo")}">` : "";
+  const ed = [D.master.numero_edizione && `${D.master.numero_edizione} edizione`, D.master.edizione].filter(Boolean).join(" · ");
+  const mark = `<span class="mark" aria-hidden="true"><b>M</b><i></i><span>${esc(D.master.numero_edizione || "")}</span></span>`;
+  $("#brand").innerHTML = `${logo || mark}<div class="kicker eyebrow"><b>Master IULM</b><span>Calendario degli studenti</span></div>`;
+  // sottotitolo "Master universitario di primo livello · Università IULM": la prima parte va nell'etichetta, il resto nella riga dei dati
+  const parti = String(D.master.sottotitolo || "").split(" · ");
+  $("#lede").textContent = parti[0] || "";
+  const dati = [D.master.numero_edizione && `<b>${esc(D.master.numero_edizione)} edizione</b>`, D.master.edizione && `A.A. ${esc(D.master.edizione)}`]
+    .concat(parti.slice(1).map(esc)).filter(Boolean);
+  $("#ed").innerHTML = dati.map((d, i) => `<span${i === dati.length - 1 && i > 1 ? ' class="u"' : ""}>${d}</span>`).join("");
+  renderNext();
+  renderPath();
+}
+
+function prossima() {
+  const now = adesso();
+  for (const l of tutte) if (quando(l.data, l.fine) > now) return { l, live: quando(l.data, l.inizio) <= now };
+  return null;
+}
+
+function renderNext() {
+  const box = $("#next"), p = prossima();
+  if (!p) {
+    box.className = "next";
+    box.innerHTML = `<span class="lbl eyebrow">Calendario</span><p class="what">Le prossime lezioni saranno pubblicate a breve.</p>`;
+    return;
+  }
+  const { l, live } = p, now = adesso(), gg = giorniTra(now, parse(l.data));
+  // la parola grande dice «quando»; il testo piccolo solo quanto manca (data e orari sono nella riga sotto)
+  const durata = ms => { const m = Math.max(1, Math.round(ms / 60000)), h = Math.floor(m / 60), r = m % 60; return h ? `${h} h${r ? ` ${r} min` : ""}` : `${m} min`; };
+  let n, u;
+  if (live) { n = "Ora"; u = `ancora ${durata(quando(l.data, l.fine) - now)}`; }
+  else if (gg === 0) { n = "Oggi"; u = `tra ${durata(quando(l.data, l.inizio) - now)}`; }
+  else if (gg === 1) { n = "Domani"; u = ""; }
+  else { n = gg; u = "giorni"; }
+  box.className = "next" + (live ? " live" : "");
+  box.innerHTML = `
+    <div class="next-top"><span class="lbl eyebrow">${live ? "In corso" : "Prossimo incontro"}</span><span class="tag" style="${stileTipo(l.tipo)}">${esc(l.tipo)}</span></div>
+    <div class="count"><b>${esc(n)}</b>${u ? `<span>${esc(u)}</span>` : ""}</div>
+    <div class="when">${esc(riduci(fmt(l.data, { weekday: "long", day: "numeric", month: "long" })))} · ${esc(l.inizio)}–${esc(l.fine)}</div>
+    <div class="what">${esc(l.titolo)}</div>
+    ${l.dettaglio ? `<p class="det">${esc(l.dettaglio)}</p>` : ""}
+    ${relatori(l, 3)}
+    <div class="next-actions">
+      <button class="hbtn gold" data-vai="${esc(l.mod.id)}|${esc(l.data)}">Vai al giorno</button>
+      <a class="hbtn" href="${esc(linkGoogle(l))}" target="_blank" rel="noopener">${ico("cal")}Aggiungi al calendario</a>
+    </div>`;
+  verificaIcs();
+}
+
+function renderPath() {
+  const conDate = D.moduli.filter(m => m.dal);
+  if (!conDate.length) return;
+  const now = adesso(), oggi = isoDi(now);
+  const corrente = conDate.find(m => m.dal <= oggi && oggi <= m.al);
+  const prossimo = conDate.find(m => m.dal > oggi);
+  const gg = giorniTra(now, parse(conDate[0].dal));
+  const fine = oggi > conDate[conDate.length - 1].al;
+  const ora = corrente ? `${esc(nomeModulo(corrente))} <em>in corso</em>`
+    : fine ? "Percorso concluso"
+    : gg > 0 ? `Si parte <em>tra ${gg} ${gg === 1 ? "giorno" : "giorni"}</em>`
+    : prossimo ? `${esc(nomeModulo(prossimo))} <em>dal ${esc(fmt(prossimo.dal, { day: "numeric", month: "short" }))}</em>` : "";
+  const aperto = !$("#path-list").hidden;
+  $("#path-btn").setAttribute("aria-expanded", aperto);
+  $("#path-btn").innerHTML = `<span class="eyebrow">Il percorso · ${conDate.length} moduli</span>
+    <span class="ora">${ora}</span><span class="apri">${aperto ? "Chiudi" : "Tutti i moduli"}${ico("down")}</span>
+    <span class="prog" aria-hidden="true">${conDate.map(m => `<i class="${m.al < oggi ? "fatto" : m === corrente ? "ora" : ""}"></i>`).join("")}</span>`;
+  $("#path-list").innerHTML = conDate.map(m => {
+    const inCorso = m === corrente;
+    const st = inCorso ? `<span class="st ora">In corso</span>` : m.al < oggi ? `<span class="st">Concluso</span>` : m.pubblicato ? `<span class="st ok">Online</span>` : `<span class="st">In arrivo</span>`;
+    return `<li><button class="mrow ${m.al < oggi ? "passato" : ""}" data-mod="${esc(m.id)}" aria-current="${m.id === stato.modulo && stato.tab === "cal"}">
+      <span class="mn">${esc(breve(m))}</span>
+      <span class="mt">${esc(m.titolo.replace(/^Laboratorio · /, ""))}<span class="md">${esc(intervallo(m))}</span></span>${st}</button></li>`;
+  }).join("");
+}
+
+/* ============================ FILTRI ============================ */
+function renderFilters() {
+  const presenti = [...new Set(tutte.map(l => l.tipo))];
+  const ordine = Object.keys(TIPI).filter(t => presenti.includes(t));
+  $("#filters").innerHTML = ordine.map(t => `<button class="fchip" data-tipo="${esc(t)}" style="${stileTipo(t)}" aria-pressed="${stato.tipi.has(t)}"><i></i>${esc(t)}</button>`).join("");
+  const vis = stato.tab === "cal";
+  $("#btn-filter").hidden = !vis;
+  $("#filters").hidden = !(vis && stato.filtra);
+  $("#btn-filter").setAttribute("aria-expanded", vis && stato.filtra);
+  $("#filter-pip").hidden = !stato.tipi.size;
+  $("#search").hidden = !(stato.cerca || stato.q);
+  $("#btn-search").setAttribute("aria-expanded", !$("#search").hidden);
+}
+
+/* ============================ CALENDARIO ============================ */
+function relatori(l, max = 4) {
+  const ch = [];
+  for (const pid of l.persone) {
+    const p = D.persone[pid]; if (!p) continue;
+    ch.push(`<button class="chip" data-p="${esc(pid)}"><span class="ini" aria-hidden="true">${esc(ini(p.nome))}</span><span>${esc(p.nome)}</span></button>`);
+  }
+  for (const oid of l.organizzazioni) {
+    const o = D.organizzazioni[oid]; if (!o) continue;
+    ch.push(`<button class="chip org" data-o="${esc(oid)}">${esc(o.nome)}</button>`);
+  }
+  let h = "";
+  if (ch.length) {
+    const visibili = ch.length > max + 1 ? ch.slice(0, max) : ch;
+    const nascosti = ch.slice(visibili.length);
+    h = `<div class="people">${visibili.join("")}${nascosti.length ? `<button class="more" data-altri="${esc(encodeURIComponent(nascosti.join("")))}">+${nascosti.length} ${nascosti.length === 1 ? "altro" : "altri"}</button>` : ""}</div>`;
+  }
+  if (l.altri.length) h += `<p class="extra"><span>${ch.length ? "Con anche: " : "Con: "}<b>${esc(l.altri.join(", "))}</b></span></p>`;
+  if (l.staff) h += `<p class="extra"><span>${ch.length || l.altri.length ? "Insieme allo " : "Con lo "}<b>staff del master</b></span></p>`;
+  if (l.luogo) {
+    // "Aula 412 (Edificio IULM 4, 1° piano)" → Aula 412 in evidenza, edificio e piano accanto
+    const m = l.luogo.match(/^(.*?)\s*\((.*)\)\s*$/);
+    h += `<p class="place">${ico("pin")}<span><b>${esc(m ? m[1] : l.luogo)}</b>${m ? ` · ${esc(m[2])}` : ""}</span></p>`;
+  }
+  return h;
+}
+
+const maiuscola = s => s.charAt(0).toUpperCase() + s.slice(1);
+function eventoHtml(ev) {
+  const fatti = [
+    ev.orari && `<div>${ico("cal")}<span><b>${esc(maiuscola(fmt(ev.data, { weekday: "long", day: "numeric", month: "long" })))}</b>${esc(ev.orari)}</span></div>`,
+    ev.luogo && `<div>${ico("pin")}<span><b>${esc(ev.luogo.split(" · ")[0])}</b>${esc(ev.luogo.split(" · ").slice(1).join(" · "))}</span></div>`,
+    ev.breve && `<div>${ico("glass")}<span><b>${esc(ev.breve.split(" · ")[0])}</b>${esc(ev.breve.split(" · ").slice(1).join(" · "))}</span></div>`
+  ].filter(Boolean).join("");
+  const prog = ev.programma.map(r => `<div class="r"><span class="t">${esc(r.ora)}</span><div>
+      ${r.etichetta ? `<span class="k">${esc(r.etichetta)}</span>` : ""}<div class="h">${esc(r.titolo)}</div>
+      ${r.relatori.length ? `<ul class="sp">${r.relatori.map(x => { const [n, ...ruolo] = x.split(" · "); return `<li><b>${esc(n)}</b>${ruolo.length ? " · " + esc(ruolo.join(" · ")) : ""}</li>`; }).join("")}</ul>` : ""}
+      ${r.descrizione ? `<p class="d">${esc(r.descrizione)}</p>` : ""}</div></div>`).join("");
+  // a sinistra le informazioni pratiche, a destra il programma (su telefono una sotto l'altra)
+  return `${ev.descrizione ? `<p class="ev-intro">${esc(ev.descrizione)}</p>` : ""}
+    <div class="ev-cols"><div class="ev-l">
+      ${fatti ? `<div class="ev-facts">${fatti}</div>` : ""}
+      ${ev.nota ? `<div class="ev-note"><b>Da sapere</b>${esc(ev.nota)}</div>` : ""}
+      ${ev.pdf ? `<div class="ev-acts"><a class="btn" href="${esc(ev.pdf)}" target="_blank" rel="noopener">${ico("file")}Programma ufficiale (PDF)</a></div>` : ""}
+    </div><div class="ev-r">
+      ${prog ? `<span class="eyebrow">Programma</span><div class="tl">${prog}</div>` : ""}
+      ${ev.partecipanti.length ? `<span class="eyebrow">${esc(ev.partecipanti_titolo)}</span><p class="mz">${ev.partecipanti.map(esc).join(`<span class="sep"> · </span>`)}</p>` : ""}
+    </div></div>`;
+}
+
+function slot(l, mostraModulo) {
+  const ev = l.evento, aperto = ev && stato.eventi.has(ev.id);
+  return `<article class="slot${ev ? " ev" : ""}${aperto ? " ev-open" : ""}"${ev ? ` id="ev-${esc(ev.id)}"` : ""}>
+    <div class="slot-top"><span class="time"><b>${esc(l.inizio)}</b> – ${esc(l.fine)}</span><span class="tag" style="${stileTipo(l.tipo)}">${esc(l.tipo)}</span></div>
+    ${mostraModulo ? `<span class="mod-of">${esc(nomeModulo(l.mod))} · ${esc(l.mod.titolo)}</span>` : ""}
+    <h3>${esc(l.titolo)}</h3>
+    ${l.dettaglio ? `<p class="det">${esc(l.dettaglio)}</p>` : ""}
+    ${relatori(l)}
+    ${ev ? `<button class="exp-btn" data-ev="${esc(ev.id)}" aria-expanded="${aperto}" aria-controls="exp-${esc(ev.id)}"><span>${aperto ? "Chiudi il programma" : "Programma, relatori e informazioni"}</span>${ico("down")}</button>
+      <div class="exp" id="exp-${esc(ev.id)}" ${aperto ? "" : "hidden"}>${aperto ? eventoHtml(ev) : ""}</div>` : ""}
+    <div class="slot-foot">${l.materiali ? `<a class="mat" href="${esc(l.materiali)}" target="_blank" rel="noopener" title="Si apre sul Drive del master: serve l’account universitario">${ico("file")}Slide e materiali</a>` : ""}<a class="gcal" href="${esc(linkGoogle(l))}" target="_blank" rel="noopener" title="Aggiungi a Google Calendar">${ico("cal")}<span>Aggiungi al calendario</span></a></div>
+  </article>`;
+}
+
+const lunedi = iso => { const d = parse(iso); d.setDate(d.getDate() - ((d.getDay() + 6) % 7)); return isoDi(d); };
+
+function giorniHtml(lezioni, mostraModulo, conArchivio) {
+  const perGiorno = new Map();
+  for (const l of lezioni) { if (!perGiorno.has(l.data)) perGiorno.set(l.data, []); perGiorno.get(l.data).push(l); }
+  const giorni = [...perGiorno].sort((a, b) => a[0].localeCompare(b[0]));
+  const oggi = isoDi(adesso());
+  const settimane = lista => {
+    const perSett = new Map();
+    for (const [d, ls] of lista) { const k = lunedi(d); if (!perSett.has(k)) perSett.set(k, []); perSett.get(k).push([d, ls]); }
+    let h = "";
+    for (const [, gg] of perSett) {
+      const da = gg[0][0], a = gg[gg.length - 1][0];
+      const stessoMese = parse(da).getMonth() === parse(a).getMonth();
+      const lab = da === a ? fmt(da, { day: "numeric", month: "long" }) : `${fmt(da, stessoMese ? { day: "numeric" } : { day: "numeric", month: "long" })} – ${fmt(a, { day: "numeric", month: "long" })}`;
+      h += `<section class="week"><div class="week-h eyebrow">Settimana ${esc(lab)}</div>`;
+      for (const [d, ls] of gg) {
+        const cls = d === oggi ? "today" : d < oggi ? "past" : "";
+        ls.sort((x, y) => (x.inizio || "").localeCompare(y.inizio || ""));
+        h += `<div class="day ${cls}" id="g-${d}">
+          <div class="date"><span class="dn">${parse(d).getDate()}</span><span class="dw">${esc(fmt(d, { weekday: "short" }).replace(".", ""))}</span><span class="mo">${esc(fmt(d, { month: "short" }).replace(".", ""))}</span>${d === oggi ? `<span class="oggi">Oggi</span>` : ""}</div>
+          <div class="slots ${ls.length === 1 ? "one" : ""}">${ls.map(l => slot(l, mostraModulo)).join("")}</div>
+        </div>`;
+      }
+      h += `</section>`;
+    }
+    return h;
+  };
+  // Archivio: le giornate già passate restano consultabili, ma chiuse sotto un pulsante
+  const passati = conArchivio ? giorni.filter(([d]) => d < oggi) : [];
+  const prossimi = giorni.filter(([d]) => !passati.length || d >= oggi);
+  if (!passati.length || !prossimi.length) return settimane(giorni);
+  const n = passati.reduce((s, [, ls]) => s + ls.length, 0);
+  const apri = stato.archivio;
+  return `<div class="arch"><button class="arch-btn" data-arch aria-expanded="${apri}">${ico("archive")}<span>Lezioni passate <span class="n">· ${n} ${n === 1 ? "incontro" : "incontri"}</span></span>${ico("down", "ico chev")}</button>
+    ${apri ? `<div class="arch-body">${settimane(passati)}</div><div class="arch-end">Da oggi in poi</div>` : ""}</div>` + settimane(prossimi);
+}
+
+function renderCal() {
+  const filtroAttivo = stato.q || stato.tipi.size;
+  if (filtroAttivo) {
+    const q = norm(stato.q);
+    const ris = tutte.filter(l => (!q || testoRicerca(l).includes(q)) && (!stato.tipi.size || stato.tipi.has(l.tipo)));
+    const cosa = [stato.q && `«${esc(stato.q)}»`, stato.tipi.size && [...stato.tipi].join(", ")].filter(Boolean).join(" · ");
+    let h = `<div class="modhead"><span class="eyebrow">Risultati nei moduli pubblicati</span><h2>${ris.length} ${ris.length === 1 ? "incontro" : "incontri"}</h2><div class="meta"><span>${cosa}</span><button class="btn" data-reset>Mostra tutto</button></div></div>`;
+    h += ris.length ? giorniHtml(ris, true) : `<div class="empty"><h2>Nessun risultato</h2><p>Prova con un cognome, il nome di un'azienda o una parola del titolo della lezione.</p></div>`;
+    $("#view").innerHTML = h; return;
+  }
+  const m = D.moduli.find(x => x.id === stato.modulo);
+  const idx = D.moduli.indexOf(m), prev = D.moduli[idx - 1], next = D.moduli[idx + 1];
+  const nav = `<span class="modnav"><button data-mod="${esc(prev?.id || "")}" ${prev ? "" : "disabled"} aria-label="Modulo precedente">${ico("arrow-l")}</button><button data-mod="${esc(next?.id || "")}" ${next ? "" : "disabled"} aria-label="Modulo successivo">${ico("arrow-r")}</button></span>`;
+  let h = `<div class="modhead"><span class="eyebrow">${esc(nomeModulo(m))}</span><h2>${esc(m.titolo)}</h2><div class="meta"><span>${esc(intervallo(m))}</span>${m.pubblicato ? `<span>${m.giorni.reduce((n, g) => n + g.lezioni.length, 0)} incontri</span>` : ""}${nav}</div></div>`;
+  if (!m.pubblicato) {
+    h += `<div class="locked"><h2>In arrivo</h2><p>Il calendario dettagliato di questo modulo, con docenti, ospiti e aziende, sarà pubblicato qui prima dell'inizio delle lezioni.</p></div>`;
+  } else {
+    h += giorniHtml(m.giorni.flatMap(g => g.lezioni.map(l => ({ ...l, mod: m }))), false, true);
+  }
+  $("#view").innerHTML = h;
+}
+
+/* ============================ PERSONE ============================ */
+const lezioniDi = pid => tutte.filter(l => l.persone.includes(pid));
+const lezioniOrg = oid => tutte.filter(l => l.organizzazioni.includes(oid) || l.persone.some(p => D.persone[p]?.organizzazione === oid));
+const cognome = n => n.split(" ").slice(-1)[0];
+const avatar = (p, cls = "mono") => `<span class="${cls}" aria-hidden="true">${p.foto ? `<img src="${esc(p.foto)}" alt="">` : esc(ini(p.nome))}</span>`;
+
+function renderPeople() {
+  const q = norm(stato.q);
+  const persone = Object.entries(D.persone)
+    .filter(([, p]) => !q || norm([p.nome, p.ruolo, D.organizzazioni[p.organizzazione]?.nome, p.bio].join(" ")).includes(q))
+    .sort((a, b) => cognome(a[1].nome).localeCompare(cognome(b[1].nome), "it"));
+  const orgs = Object.entries(D.organizzazioni)
+    .filter(([, o]) => !q || norm([o.nome, o.descrizione].join(" ")).includes(q))
+    .sort((a, b) => a[1].nome.localeCompare(b[1].nome, "it"));
+  let h = `<div class="sec-head"><span class="eyebrow" style="color:var(--oro)">Docenti e ospiti</span><h2>Chi incontrerai</h2><p>Docenti, ospiti e aziende dei moduli pubblicati. Tocca una scheda per leggere la bio, i link e le lezioni.</p></div>`;
+  h += persone.length ? `<div class="grid">` + persone.map(([pid, p]) => {
+    const n = lezioniDi(pid).length, org = D.organizzazioni[p.organizzazione]?.nome;
+    return `<button class="pcard" data-p="${esc(pid)}">${avatar(p)}
+      <span class="nm">${esc(p.nome)}</span>
+      <span class="rl">${esc(p.ruolo || "")}${org && !String(p.ruolo).includes(org) ? ` · ${esc(org)}` : ""}</span>
+      <span class="ct">${n} ${n === 1 ? "incontro" : "incontri"}</span></button>`;
+  }).join("") + `</div>` : `<div class="empty"><h2>Nessuna persona trovata</h2><p>Prova con un altro nome.</p></div>`;
+  if (orgs.length) {
+    h += `<h2 class="sub-h">Aziende e realtà coinvolte</h2><div class="orgs">` + orgs.map(([oid, o]) => `
+      <article class="ocard"><h4>${esc(o.nome)}</h4><p>${esc(o.descrizione)}</p>
+      <div class="links">${o.sito ? `<a href="${esc(o.sito)}" target="_blank" rel="noopener">${esc(o.sito.replace(/^https?:\/\/(www\.)?/, "").replace(/\/$/, ""))} ↗</a>` : ""}<a href="#" data-o="${esc(oid)}">Gli incontri</a></div></article>`).join("") + `</div>`;
+  }
+  $("#view").innerHTML = h;
+}
+
+/* ============================ PANNELLO ============================ */
+let ultimoFocus = null;
+function apri(html) {
+  ultimoFocus = document.activeElement;
+  const p = $("#panel"), v = $("#velo");
+  p.innerHTML = `<span class="grab" aria-hidden="true"></span><button class="close" id="p-close">Chiudi</button>` + html;
+  p.hidden = false; v.hidden = false; p.scrollTop = 0;
+  document.body.style.overflow = "hidden";
+  requestAnimationFrame(() => { p.classList.add("on"); v.classList.add("on"); $("#p-close").focus({ preventScroll: true }); });
+}
+function chiudi() {
+  const p = $("#panel"), v = $("#velo");
+  p.classList.remove("on"); v.classList.remove("on");
+  document.body.style.overflow = "";
+  setTimeout(() => { p.hidden = true; v.hidden = true; }, 290);
+  if (ultimoFocus) ultimoFocus.focus({ preventScroll: true });
+}
+const mini = ls => ls.length ? `<span class="eyebrow">In aula</span><div class="mini">` + ls.map(l => `<div><span class="d">${esc(riduci(fmt(l.data, { weekday: "short", day: "numeric", month: "short" })))}<br>${esc(l.inizio)}–${esc(l.fine)}</span><span>${esc(l.titolo)}</span></div>`).join("") + `</div>` : "";
+const orgBox = o => `<div class="org-box"><b>${esc(o.nome)}</b><p>${esc(o.descrizione)}</p>${o.sito ? `<a href="${esc(o.sito)}" target="_blank" rel="noopener">${esc(o.sito.replace(/^https?:\/\/(www\.)?/, "").replace(/\/$/, ""))} ↗</a>` : ""}</div>`;
+
+/* «Segnala un errore» nelle schede: apre un'email già compilata.
+   Privacy: l'indirizzo non è mai scritto in chiaro nella pagina (né visibile, né leggibile dai programmi
+   che raccolgono indirizzi): è codificato e viene ricomposto solo al clic. Lasciare vuoto per spegnere il link. */
+const CONTATTO_SEGNALAZIONI = "bW9jLmxpYW1nQG9kcmFub2VsaXRuYXRpcA==";
+function segnala(chi) {
+  if (!CONTATTO_SEGNALAZIONI) return "";
+  return `<p class="segnala">Hai notato un errore in questa scheda? <a href="#" data-segnala="${esc(chi)}">Segnalalo allo staff</a></p>`;
+}
+document.addEventListener("click", e => {
+  const a = e.target.closest("[data-segnala]"); if (!a) return;
+  e.preventDefault();
+  const chi = a.dataset.segnala, dest = atob(CONTATTO_SEGNALAZIONI).split("").reverse().join("");
+  const oggetto = `Segnalazione dalla dashboard · ${chi}`;
+  const testo = `Ciao, nella scheda di ${chi} sulla dashboard del master ho notato questo errore:\n\n`;
+  location.href = `mailto:${dest}?subject=${encodeURIComponent(oggetto)}&body=${encodeURIComponent(testo)}`;
+});
+function apriPersona(pid) {
+  const p = D.persone[pid]; if (!p) return;
+  const o = D.organizzazioni[p.organizzazione];
+  const links = [];
+  if (p.cv) links.push(`<a class="btn primary" href="${esc(p.cv)}" target="_blank" rel="noopener">${ico("file")}Apri il CV</a>`);
+  for (const l of p.link || []) links.push(`<a class="btn" href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.etichetta)} ↗</a>`);
+  apri(`<div class="p-head">${avatar(p)}<div><h2 id="p-name">${esc(p.nome)}</h2><div class="rl">${esc(p.ruolo || "")}</div></div></div>
+    ${p.bio ? `<p class="bio">${esc(p.bio)}</p>` : `<p class="note">Il profilo completo sarà disponibile a breve.</p>`}
+    ${links.length ? `<div class="links">${links.join("")}</div>` : ""}
+    ${o ? `<span class="eyebrow">Organizzazione</span>${orgBox(o)}` : ""}
+    ${mini(lezioniDi(pid))}
+    ${segnala(p.nome)}`);
+}
+function apriOrg(oid) {
+  const o = D.organizzazioni[oid]; if (!o) return;
+  apri(`<div class="p-head"><span class="mono" aria-hidden="true">${esc(ini(o.nome))}</span><div><h2 id="p-name">${esc(o.nome)}</h2><div class="rl">Azienda / organizzazione</div></div></div>
+    <p class="bio">${esc(o.descrizione)}</p>
+    ${o.sito ? `<div class="links"><a class="btn" href="${esc(o.sito)}" target="_blank" rel="noopener">Sito web ↗</a></div>` : ""}
+    ${mini(lezioniOrg(oid))}
+    ${segnala(o.nome)}`);
+}
+
+/* ---------- tutto il calendario sul telefono (.ics), solo sul sito pubblicato ---------- */
+let icsUrl = null;
+function verificaIcs() {
+  const btn = $("#sub-btn"); if (!btn) return;
+  if (icsUrl) { btn.hidden = false; return; }
+  if (!/^https?:$/.test(location.protocol)) return;
+  const url = new URL("calendario.ics", location.href).href;
+  fetch(url, { method: "HEAD" }).then(r => { if (r.ok) { icsUrl = url; const b = $("#sub-btn"); if (b) b.hidden = false; } }).catch(() => {});
+}
+function apriIscrizione() {
+  const webcal = icsUrl.replace(/^https?:/, "webcal:");
+  apri(`<div class="p-head"><span class="mono" aria-hidden="true">${ico("cal")}</span><div><h2 id="p-name">Calendario sul telefono</h2><div class="rl">Si aggiorna da solo quando cambia il programma</div></div></div>
+    <span class="eyebrow">iPhone e Mac</span>
+    <div class="links"><a class="btn primary" href="${esc(webcal)}">Aggiungi a Calendario</a></div>
+    <span class="eyebrow">Google Calendar</span>
+    <ol class="steps"><li>Copia l'indirizzo qui sotto.</li><li>Da computer apri Google Calendar → <b>Altri calendari</b> → <b>+</b> → <b>Da URL</b>.</li><li>Incolla l'indirizzo e conferma.</li></ol>
+    <div class="copyrow"><input id="ics-url" readonly value="${esc(icsUrl)}" aria-label="Indirizzo del calendario"><button class="btn" id="copy-ics">Copia</button></div>
+    <span class="eyebrow">Outlook</span>
+    <ol class="steps"><li><b>Aggiungi calendario</b> → <b>Sottoscrivi dal Web</b> → incolla lo stesso indirizzo.</li></ol>
+    <p class="note">Gli aggiornamenti arrivano entro alcune ore: in caso di cambi dell'ultimo minuto fa fede questa pagina.</p>`);
+}
+
+/* ============================ PULSANTE "OGGI" ============================ */
+function obiettivoOggi() {
+  const p = prossima(); if (!p) return null;
+  const gg = giorniTra(adesso(), parse(p.l.data));
+  return { mod: p.l.mod.id, data: p.l.data, testo: p.live || gg === 0 ? "Oggi" : gg === 1 ? "Domani" : "Prossima lezione" };
+}
+function aggiornaFab() {
+  const o = obiettivoOggi(), fab = $("#fab");
+  if (!o) { fab.classList.add("off"); return; }
+  $("#fab-t").textContent = o.testo;
+  const el = document.getElementById("g-" + o.data);
+  let visibile = false;
+  if (el && stato.tab === "cal") { const r = el.getBoundingClientRect(); visibile = r.top < innerHeight && r.bottom > 120; }
+  const sottoHero = $("#bar").getBoundingClientRect().top <= 1;
+  fab.classList.toggle("off", !sottoHero || visibile);
+}
+
+/* ============================ NAVIGAZIONE ============================ */
+function render() {
+  for (const [id, t] of [["#tab-cal", "cal"], ["#tab-ppl", "ppl"]]) $(id).setAttribute("aria-selected", stato.tab === t);
+  $("#q").placeholder = stato.tab === "cal" ? "Cerca un argomento, un docente, un'azienda…" : "Cerca una persona o un'azienda…";
+  $("#q-clear").hidden = !stato.q;
+  renderFilters();
+  document.querySelectorAll(".mrow").forEach(b => b.setAttribute("aria-current", b.dataset.mod === stato.modulo && stato.tab === "cal"));
+  if (stato.tab === "cal") renderCal(); else renderPeople();
+  requestAnimationFrame(aggiornaFab);
+}
+function vaiSezione(t) {
+  stato.tab = t;
+  render();
+  const bar = $("#bar"); if (bar.getBoundingClientRect().top > 1) return;
+  bar.scrollIntoView({ block: "start" });
+}
+function scegliModulo(id, giorno) {
+  if (!id) return;
+  if (id !== stato.modulo) stato.archivio = false;
+  if (giorno && giorno < isoDi(adesso())) stato.archivio = true;
+  stato.modulo = id; stato.tab = "cal"; stato.q = ""; stato.tipi.clear(); $("#q").value = ""; stato.cerca = false;
+  store.set("fw-modulo", id);
+  try { history.replaceState(null, "", "#" + id); } catch (e) {}
+  if (!largo()) $("#path-list").hidden = true;
+  renderPath();
+  render();
+  const veloce = matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth";
+  if (giorno) { const el = document.getElementById("g-" + giorno); if (el) el.scrollIntoView({ behavior: veloce, block: "start" }); }
+  else $("#bar").scrollIntoView({ block: "start" });
+}
+
+/* ---------- sezione Eventi sotto la testata ---------- */
+function renderEvid() {
+  const ora = adesso(), oggi = isoDi(ora), visti = new Set();
+  const ev = tutte.filter(l => l.evento && !visti.has(l.evento.id) && visti.add(l.evento.id))
+    .filter(l => (l.evento.evidenza_dal || l.data) <= oggi && (l.data > oggi || (l.data === oggi && ora < quando(l.data, l.fine || "23:59"))))
+    .sort((a, b) => (a.data + a.inizio).localeCompare(b.data + b.inizio));
+  const box = $("#evid");
+  if (!ev.length) { box.hidden = true; box.innerHTML = ""; return; }
+  const giorno = d => d === oggi ? "Oggi" : giorniTra(ora, parse(d)) === 1 ? "Domani" : maiuscola(fmt(d, { weekday: "long", day: "numeric", month: "long" }));
+  const [p, ...altri] = ev, e = p.evento;
+  const luogo = (e.luogo || p.luogo || "").split(" · ").slice(0, 2).join(" · ");
+  const info = [luogo, `${p.inizio}–${p.fine}`, (e.breve || "").split(" · ")[0]].filter(Boolean).map(esc).join(" · ");
+  const nota = e.nota ? (i => i > 0 ? `<b>${esc(e.nota.slice(0, i))}</b>${esc(e.nota.slice(i))}` : esc(e.nota))(e.nota.indexOf(": ")) : "";
+  box.innerHTML = `<div class="top"><div>
+      <div class="ey">${ev.length > 1 ? "Eventi in programma" : "In evidenza"} · ${esc(giorno(p.data))}</div>
+      <h3>${esc(p.titolo)}</h3>
+      ${info ? `<p class="info">${info}</p>` : ""}${nota ? `<p class="rule">${nota}</p>` : ""}
+    </div><button class="go" data-apri-ev="${esc(e.id)}">Programma ${ico("arrow-r")}</button></div>
+    ${altri.length ? `<ul class="evid-more">${altri.map(l => `<li><button data-apri-ev="${esc(l.evento.id)}"><span class="d">${esc(riduci(fmt(l.data, { weekday: "short", day: "numeric", month: "short" })))}</span><span>${esc(l.titolo)}</span>${ico("arrow-r")}</button></li>`).join("")}</ul>` : ""}`;
+  box.hidden = false;
+}
+
+/* ---------- eventi: apertura della card ---------- */
+function toggleEvento(id, forza) {
+  const apri = forza ?? !stato.eventi.has(id);
+  apri ? stato.eventi.add(id) : stato.eventi.delete(id);
+  document.querySelectorAll(`[id="ev-${CSS.escape(id)}"]`).forEach(card => {
+    const l = tutte.find(x => x.evento?.id === id); if (!l) return;
+    card.outerHTML = slot(l, !!card.querySelector(".mod-of"));
+  });
+}
+function apriEvento(id) {
+  const l = tutte.find(x => x.evento?.id === id); if (!l) return;
+  if (!$("#panel").hidden) chiudi();
+  stato.eventi.add(id);
+  scegliModulo(l.mod.id, l.data);
+  try { history.replaceState(null, "", "#evento-" + id); } catch (e) {}
+  const card = document.getElementById("ev-" + id);
+  if (card) { card.classList.add("ev-hl"); setTimeout(() => card.classList.remove("ev-hl"), 2200); }
+}
+
+document.addEventListener("click", e => {
+  const t = e.target;
+  const evb = t.closest("[data-ev]"); if (evb) { toggleEvento(evb.dataset.ev); return; }
+  const eva = t.closest("[data-apri-ev]"); if (eva) { e.preventDefault(); if (eva.dataset.letto) { segnaLetti([eva.dataset.letto]); aggiornaContatori(); } apriEvento(eva.dataset.apriEv); return; }
+  if (t.closest("[data-arch]")) { stato.archivio = !stato.archivio; renderCal(); return; }
+  const vai = t.closest("[data-vai]");
+  if (vai) { const [m, g] = vai.dataset.vai.split("|"); if (!$("#panel").hidden) chiudi(); scegliModulo(m, g); return; }
+  const am = t.closest("[data-avv-mod]"); if (am) { e.preventDefault(); if (am.dataset.letto) segnaLetti([am.dataset.letto]); if (!$("#panel").hidden) chiudi(); aggiornaContatori(); scegliModulo(am.dataset.avvMod); return; }
+  const mod = t.closest("[data-mod]"); if (mod && !mod.disabled) { scegliModulo(mod.dataset.mod); return; }
+  const tipo = t.closest("[data-tipo]");
+  if (tipo) { const x = tipo.dataset.tipo; stato.tipi.has(x) ? stato.tipi.delete(x) : stato.tipi.add(x); render(); return; }
+  if (t.closest("[data-reset]")) { stato.q = ""; stato.tipi.clear(); $("#q").value = ""; stato.cerca = false; stato.filtra = false; render(); return; }
+  const altri = t.closest("[data-altri]"); if (altri) { altri.outerHTML = decodeURIComponent(altri.dataset.altri); return; }
+  const p = t.closest("[data-p]"); if (p) { apriPersona(p.dataset.p); return; }
+  const o = t.closest("[data-o]"); if (o) { e.preventDefault(); apriOrg(o.dataset.o); return; }
+  if (t.closest("[data-leggi]") || t.closest("#bell")) { apriAvvisi(); return; }
+  if (t.closest("#path-btn")) { $("#path-list").hidden = !$("#path-list").hidden; renderPath(); return; }
+  const nasc = t.closest("[data-chiudi-avviso]"); if (nasc) { segnaLetti([nasc.dataset.chiudiAvviso]); aggiornaContatori(); return; }
+  if (t.closest("#fab")) { const x = obiettivoOggi(); if (x) scegliModulo(x.mod, x.data); return; }
+  if (t.closest("#btn-search")) { stato.cerca = $("#search").hidden; if (!stato.cerca) { stato.q = ""; $("#q").value = ""; } render(); if (stato.cerca) $("#q").focus(); return; }
+  if (t.closest("#btn-filter")) { stato.filtra = !stato.filtra; render(); return; }
+  if (t.closest("#sub-btn")) { apriIscrizione(); return; }
+  if (t.id === "copy-ics") {
+    const inp = $("#ics-url");
+    const ok = () => { t.textContent = "Copiato"; };
+    if (navigator.clipboard) navigator.clipboard.writeText(inp.value).then(ok).catch(() => { inp.select(); });
+    else inp.select();
+    return;
+  }
+  if (t.id === "p-close" || t.id === "velo") chiudi();
+});
+document.addEventListener("keydown", e => { if (e.key === "Escape" && !$("#panel").hidden) chiudi(); });
+$("#tab-cal").addEventListener("click", () => vaiSezione("cal"));
+$("#tab-ppl").addEventListener("click", () => vaiSezione("ppl"));
+$("#q").addEventListener("input", e => { stato.q = e.target.value.trim(); $("#q-clear").hidden = !stato.q; stato.tab === "cal" ? renderCal() : renderPeople(); });
+$("#q-clear").addEventListener("click", e => { e.preventDefault(); stato.q = ""; $("#q").value = ""; render(); $("#q").focus(); });
+addEventListener("scroll", () => requestAnimationFrame(aggiornaFab), { passive: true });
+addEventListener("resize", () => requestAnimationFrame(aggiornaFab));
+
+/* ---------- avvio ---------- */
+const largo = () => matchMedia("(min-width: 761px)").matches;
+stato.modulo = moduloIniziale();
+if (largo()) $("#path-list").hidden = false;
+if (location.hash === "#docenti") stato.tab = "ppl";
+const ultimaModifica = (D.aggiornamenti || []).find(u => (u.tipo || "calendario") === "calendario");
+$("#foot").innerHTML = `<span>${ultimaModifica ? `Ultima modifica al calendario: ${esc(fmt(ultimaModifica.quando.slice(0, 10), { weekday: "long", day: "numeric", month: "long" }))}, ${esc(ultimaModifica.quando.slice(11, 16))}` : `Aggiornato il ${esc(D.aggiornato)}`} · orari e ospiti possono cambiare: controlla prima di ogni lezione.</span><span>Master ${esc(D.master.titolo_master)} · Università IULM · ${esc(D.master.edizione)}</span>`;
+renderHero();
+renderEvid();
+render();
+aggiornaContatori();
+if (location.hash === "#avvisi") apriAvvisi();
+if (location.hash.startsWith("#evento-")) apriEvento(decodeURIComponent(location.hash.slice(8)));
+setInterval(() => { renderNext(); renderEvid(); aggiornaContatori(); }, 60000);
+/* Ritorno nell'app (telefono, schermata Home): orario e avvisi subito aggiornati.
+   Se nel frattempo è stata pubblicata una versione più recente del calendario, la pagina si ricarica da sola,
+   ma solo se lo studente non ha una scheda o la mappa aperta. Controllo al massimo ogni 5 minuti. */
+let ultimoControllo = Date.now();
+// confronto sul testo originale dei dati (come pubblicato), esclusa l'ora di generazione
+const datiDi = html => { const m = html.match(/const D = (\{.*?\});\n/s); return m ? m[1].replace(/"aggiornato": "[^"]*"/, "") : null; };
+const DATI_PAGINA = datiDi(document.documentElement.innerHTML);
+function controllaVersione() {
+  if (!/^https?:$/.test(location.protocol) || Date.now() - ultimoControllo < 5 * 60000) return;
+  ultimoControllo = Date.now();
+  fetch(location.pathname, { cache: "no-store" }).then(r => r.ok ? r.text() : "").then(html => {
+    const nuovi = datiDi(html); if (!nuovi || !DATI_PAGINA) return;
+    const libero = $("#panel").hidden && !document.querySelector(".zoomer");
+    if (nuovi !== DATI_PAGINA && libero) location.reload();
+  }).catch(() => {});
+}
+document.addEventListener("visibilitychange", () => {
+  if (document.visibilityState !== "visible") return;
+  renderNext(); renderEvid(); aggiornaContatori(); controllaVersione();
+});
+setInterval(() => { if (document.visibilityState === "visible") controllaVersione(); }, 30 * 60000);
+</script>
+
+<style>
+/* ===== GUIDA AL CAMPUS · mappa ufficiale IULM e indicazioni per edificio (dati letti dal calendario) ===== */
+.campus-link { display: flex; align-items: center; gap: 14px; width: 100%; border: 1px solid color-mix(in srgb, var(--oro) 60%, transparent); background: color-mix(in srgb, var(--oro) 10%, transparent); color: var(--fascia-testo); border-radius: 16px; padding: 14px 16px; text-align: left; cursor: pointer; }
+.campus-link .pinbox { flex: none; width: 40px; height: 40px; border-radius: 12px; background: var(--oro); display: grid; place-items: center; }
+.campus-link .pinbox .ico { color: var(--fascia-2); width: 20px; height: 20px; }
+.campus-link > span:nth-child(2) { flex: 1; min-width: 0; }
+.campus-link .t { font: 800 16px/1.2 var(--f-titoli); }
+.campus-link .s { display: block; font: 500 13px var(--f-testo); color: var(--fascia-tenue); margin-top: 3px; }
+.campus-link .ico { color: var(--oro); width: 18px; height: 18px; flex: none; }
+.pill-nuovo { display: inline-block; vertical-align: 2px; margin-left: 6px; font: 800 9.5px/1 var(--f-testo); letter-spacing: .1em; text-transform: uppercase; color: var(--fascia-2); background: var(--oro); border-radius: 999px; padding: 4px 7px; }
+.campus-link:hover .t { text-decoration: underline; text-decoration-color: var(--oro); text-underline-offset: 4px; }
+/* computer: colonna destra con il percorso e, sotto, la guida al campus con il menu degli edifici */
+/* griglia della testata: computer = «Ora» e strumenti a sinistra, percorso a destra per tutta l'altezza */
+.hero-grid { grid-template-areas: "next path" "next tools"; grid-template-rows: auto 1fr; }
+.hero-grid > #next { grid-area: next; }
+.hero-grid > .path { grid-area: path; }
+.hero-grid > .strumenti { grid-area: tools; }
+.strumenti { display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; align-content: start; min-width: 0; }
+.strumenti .campus-desk .eyebrow .pill-nuovo { margin-left: 8px; }
+@media (min-width: 761px) {
+  .strumenti .campus-link.tool { border-color: var(--fascia-filo); background: color-mix(in srgb, var(--fascia-2) 35%, transparent); border-radius: 20px; padding: 16px 20px; }
+  .strumenti .campus-link.tool:hover { border-color: color-mix(in srgb, var(--oro) 60%, transparent); }
+}
+/* telefono: Ora → percorso → strumenti, due riquadri affiancati */
+@media (max-width: 760px) {
+  .hero-grid { grid-template-areas: "next" "path" "tools"; grid-template-rows: none; }
+  .strumenti { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 10px; }
+  .strumenti:has(#sub-btn[hidden]) { grid-template-columns: minmax(0, 1fr); }
+  .strumenti .campus-link { flex-direction: column; align-items: flex-start; gap: 10px; padding: 14px; border-radius: 16px; position: relative; min-height: 112px; }
+  .strumenti .campus-link .s { display: none; }
+  .strumenti .campus-link .t { font-size: 15px; line-height: 1.25; padding-right: 18px; }
+  .strumenti .campus-link > .ico { position: absolute; right: 12px; top: 14px; }
+  .strumenti .campus-link .pinbox { width: 36px; height: 36px; border-radius: 10px; }
+  .strumenti .pill-nuovo { display: table; margin: 6px 0 0; }
+  /* banner più compatto: due righe di testo, il resto nella campanella */
+  .alert { padding: 10px 10px 8px 12px; gap: 6px 10px; }
+  .alert p { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .alert .acts { margin-top: -2px; }
+}
+.campus-desk { border: 1px solid var(--fascia-filo); border-radius: 20px; background: color-mix(in srgb, var(--fascia-2) 35%, transparent); padding: 18px 20px 20px; color: var(--fascia-testo); display: grid; gap: 12px; }
+.campus-desk .cd-top { display: flex; align-items: baseline; justify-content: space-between; gap: 14px; }
+.campus-desk .eyebrow { color: var(--oro); }
+.campus-desk h3 { margin: 2px 0 0; font: 800 22px/1.2 var(--f-titoli); letter-spacing: -.01em; }
+.campus-desk .cd-map { border: 0; background: none; color: var(--fascia-testo); font: 700 14px var(--f-testo); display: inline-flex; align-items: center; gap: 6px; cursor: pointer; white-space: nowrap; padding: 4px 0; }
+.campus-desk .cd-map .ico { color: var(--oro); width: 16px; height: 16px; }
+.campus-desk .cd-map:hover { text-decoration: underline; text-decoration-color: var(--oro); text-underline-offset: 4px; }
+.campus-desk label { font: 500 13.5px var(--f-testo); color: var(--fascia-tenue); }
+.sr { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.cd-sel { position: relative; }
+.cd-sel .ico { position: absolute; top: 50%; transform: translateY(-50%); pointer-events: none; width: 18px; height: 18px; }
+.cd-sel .ico.pin { left: 14px; color: var(--oro); }
+.cd-sel .ico.chev { right: 14px; color: var(--fascia-tenue); }
+.cd-sel select { appearance: none; -webkit-appearance: none; width: 100%; color-scheme: dark; border: 1px solid color-mix(in srgb, var(--oro) 60%, transparent); background: color-mix(in srgb, var(--oro) 10%, transparent); color: var(--fascia-testo); border-radius: 14px; padding: 13px 44px 13px 42px; font: 700 15px var(--f-testo); cursor: pointer; }
+.cd-sel select:hover { border-color: var(--oro); }
+.cd-sel select:focus-visible { outline: 3px solid var(--oro); outline-offset: 2px; }
+.cd-sel option { color: #1F1418; background: #fff; font-weight: 600; }
+.evid-acts { display: flex; flex-wrap: wrap; gap: 10px; justify-self: end; }
+.evid .go.go-ed .ico { color: var(--oro); }
+@media (max-width: 600px) { .evid-acts { justify-self: start; } }
+.go-ed { display: inline-flex; align-items: center; gap: 6px; border: 1px solid var(--vino); background: var(--scheda); color: var(--vino); border-radius: 999px; padding: 6px 12px; font: 700 12.5px/1 var(--f-testo); cursor: pointer; white-space: nowrap; flex: none; }
+.go-ed .ico { width: 15px; height: 15px; }
+.go-ed:hover { background: var(--vino-tenue); }
+.hbtn.go-ed { border: 1px solid var(--oro); background: transparent; color: var(--fascia-testo); padding: 9px 15px; font-size: 13.5px; }
+.hbtn.go-ed .ico { color: var(--oro); width: 16px; height: 16px; }
+.place[data-ed] { cursor: pointer; }
+.place[data-ed] b { text-decoration: underline; text-decoration-color: #E2CFA0; text-underline-offset: 3px; }
+.place[data-ed]::after { content: "›"; margin-left: 2px; color: var(--vino); font-weight: 800; }
+.hero .place[data-ed]::after { color: var(--oro); }
+.ed-h { display: grid; gap: 6px; }
+.ed-h .ey { font: 700 11px/1.3 var(--f-testo); letter-spacing: .2em; text-transform: uppercase; color: #8C6A2C; }
+.ed-h h2 { margin: 0; font: 800 30px/1.05 var(--f-titoli); letter-spacing: -.035em; color: var(--vino); text-wrap: balance; }
+.ed-h p { margin: 0; color: var(--tenue); font-size: 14px; }
+.arrow svg { display: block; width: 100%; height: auto; animation: arrow-bob 1.4s ease-in-out infinite; }
+@keyframes arrow-bob { 0%, 100% { transform: translateY(-14%); } 50% { transform: translateY(0); } }
+@media (prefers-reduced-motion: reduce) { .arrow svg { animation: none; } }
+.gmb { display: grid; grid-template-columns: 24px minmax(0, 1fr) auto; gap: 12px; align-items: center; text-decoration: none; background: #7A1A36; color: #fff; border-radius: 14px; padding: 14px 16px; min-height: 56px; }
+.gmb:hover { background: #651329; }
+.gmb:focus-visible, .lnk:focus-visible { outline: 3px solid var(--oro); outline-offset: 2px; }
+.gmb .ico { width: 22px; height: 22px; color: #fff; }
+.gmb span { font: 800 15.5px/1.25 var(--f-titoli); }
+.gmb small { display: block; font: 500 12.5px/1.3 var(--f-testo); color: #F1DCE2; margin-top: 2px; }
+.gmb .gm-a { font: 800 18px var(--f-testo); color: #E2CFA0; }
+.lnk { justify-self: start; display: inline-flex; align-items: center; gap: 6px; border: 0; background: none; padding: 6px 0; color: var(--vino); font: 700 14px var(--f-testo); cursor: pointer; }
+.lnk .ico { width: 16px; height: 16px; }
+.edlist { display: grid; }
+.edlist button { display: grid; grid-template-columns: 44px minmax(0, 1fr) auto; gap: 12px; align-items: center; text-align: left; border: 0; border-top: 1px solid var(--filo); background: none; padding: 11px 0; cursor: pointer; color: var(--inchiostro); }
+.edlist .n { width: 44px; height: 44px; border-radius: 12px; background: var(--vino-tenue); color: var(--vino); font: 800 15px/44px var(--f-titoli); text-align: center; }
+.edlist .mine .n { background: #7A1A36; color: #fff; }
+.edlist .nm { display: flex; align-items: center; gap: 8px; font: 800 15px/1.2 var(--f-titoli); }
+.edlist .cnt { font: 800 9.5px/1 var(--f-testo); letter-spacing: .1em; text-transform: uppercase; color: #8C6A2C; background: #FBF4E4; border: 1px solid #E8D3A6; border-radius: 999px; padding: 4px 7px; }
+.edlist button:not(.mine) .nm { font-weight: 700; color: var(--tenue); }
+.edlist .ds { display: block; font-size: 13px; color: var(--tenue); margin-top: 2px; }
+.edlist .ico { width: 16px; height: 16px; color: var(--vino); }
+.zoomer { position: fixed; inset: 0; z-index: 60; background: #1F1418; display: flex; flex-direction: column; }
+.zoomer .zbar { flex: none; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-top: calc(10px + env(safe-area-inset-top, 0px)); padding-bottom: 10px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); color: #F1E6E9; font: 600 13px/1.35 var(--f-testo); }
+.zoomer .zbar b { display: block; font: 800 15px/1.2 var(--f-titoli); color: #fff; }
+.zoomer .close-z { flex: none; background: #fff; color: #1F1418; border: 0; border-radius: 999px; padding: 9px 16px; font: 800 13px var(--f-testo); cursor: pointer; }
+.zoomer .zview { position: relative; flex: 1; min-height: 0; overflow: hidden; touch-action: none; cursor: grab; background: #2A2125; }
+.zoomer .zview.drag { cursor: grabbing; }
+.zoomer .zwrap { position: absolute; left: 0; top: 0; transform-origin: 0 0; background: #fff; will-change: transform; }
+.zoomer .zwrap img { display: block; max-width: none; user-select: none; -webkit-user-drag: none; pointer-events: none; }
+.zoomer .zctl { position: absolute; left: 50%; transform: translateX(-50%); bottom: calc(14px + env(safe-area-inset-bottom, 0px)); display: flex; gap: 8px; background: rgba(31,20,24,.86); border: 1px solid rgba(255,255,255,.16); border-radius: 999px; padding: 6px; }
+.zoomer .zctl button { border: 0; background: #fff; color: #1F1418; border-radius: 999px; min-width: 42px; height: 42px; padding: 0 14px; font: 800 18px/1 var(--f-testo); cursor: pointer; }
+.zoomer .zctl button.fit { font-size: 13px; white-space: nowrap; }
+.zoomer .zctl button:focus-visible, .zoomer .close-z:focus-visible { outline: 3px solid #B08A45; outline-offset: 2px; }
+/* mappa nella scheda: immagine intera e statica, con la freccia animata sull'edificio e il riferimento (IULM 1) */
+.omap { position: relative; display: block; width: 100%; border-radius: 16px; overflow: hidden; border: 1px solid var(--filo); background: #fff; cursor: zoom-in; padding: 0; }
+.omap .ostage { position: relative; }
+.omap img { display: block; width: 100%; height: auto; }
+.omap .zoom { position: absolute; right: 8px; bottom: 8px; display: inline-flex; align-items: center; gap: 5px; font: 800 11.5px/1 var(--f-testo); background: rgba(255,255,255,.95); color: #7A1A36; border-radius: 999px; padding: 7px 10px; border: 1px solid #EADDE1; box-shadow: 0 2px 8px rgba(31,20,24,.12); }
+.arrow { position: absolute; width: 4.2%; min-width: 16px; transform: translate(-50%, -100%); pointer-events: none; filter: drop-shadow(0 2px 3px rgba(0,0,0,.3)); z-index: 2; }
+.zwrap .arrow { width: 4%; }
+.refpin { position: absolute; width: 3.4%; min-width: 15px; aspect-ratio: 1; transform: translate(-50%, -50%); pointer-events: none; z-index: 1; }
+.refpin svg { display: block; width: 100%; height: 100%; overflow: visible; filter: drop-shadow(0 2px 3px rgba(0,0,0,.25)); }
+.refpin .halo { fill: #1E9A4B; opacity: .22; transform-origin: center; animation: ref-in .6s cubic-bezier(.2,.9,.3,1.3) both; }
+.zwrap .refpin { width: 2.6%; }
+@keyframes ref-in { from { transform: scale(.2); opacity: 0; } to { transform: scale(1); opacity: .22; } }
+@media (prefers-reduced-motion: reduce) { .refpin .halo { animation: none; } }
+.legenda { display: flex; flex-wrap: wrap; gap: 6px 16px; margin: 8px 0 0; padding: 0; list-style: none; font-size: 12.5px; color: var(--tenue); }
+.legenda li { display: inline-flex; align-items: center; gap: 7px; }
+.legenda b { color: var(--inchiostro); font-weight: 700; }
+.legenda .lg-a { width: 10px; height: 14px; }
+.legenda .lg-r { width: 13px; height: 13px; }
+.facts { margin: 0; display: grid; border-top: 1px solid var(--filo); }
+.facts div { display: grid; grid-template-columns: 132px minmax(0, 1fr); gap: 4px 14px; padding: 12px 0; border-bottom: 1px solid var(--filo); }
+.facts dt { font: 700 10.5px/1.5 var(--f-testo); letter-spacing: .14em; text-transform: uppercase; color: #8C6A2C; padding-top: 2px; }
+.facts dd { margin: 0; font-size: 14.5px; line-height: 1.5; color: var(--inchiostro); }
+.facts dd b { font-weight: 800; color: var(--vino); }
+.facts dd .tenue { color: var(--tenue); }
+@media (max-width: 480px) { .facts div { grid-template-columns: minmax(0, 1fr); } }
+.ed-foot { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 16px; font-size: 13px; color: var(--tenue); }
+.ed-foot b { color: var(--inchiostro); font-weight: 700; }
+.arrivo-campus { border: 1px solid var(--filo); border-radius: 16px; padding: 4px 16px; background: var(--carta); }
+.arrivo-campus .facts { border-top: 0; }
+.arrivo-campus .facts div:last-child { border-bottom: 0; }
+.mm { display: inline-grid; place-items: center; width: 20px; height: 20px; border-radius: 5px; background: #1E9A4B; color: #fff; font: 800 11px/1 var(--f-testo); margin-right: 6px; vertical-align: -4px; }
+</style>
+<script>
+(function () {
+  const PIN = { "IULM 7": [10.5, 42.4], "IULM 3": [25.1, 53.9], "IULM 1": [41.7, 43.1], "IULM 6": [63.9, 36.6], "IULM 5": [83.1, 45.0], "IULM 2": [66.7, 69.1], "IULM 4": [55.6, 76.2], "M": [3.0, 42.9] };
+  // Edifici con lezioni: ricavati dal calendario pubblicato (luogo «Aula X (Edificio IULM N, piano)»)
+  function edificiDalCalendario() {
+    const out = {};
+    for (const l of tutte) {
+      const m = (l.luogo || "").match(/^(.*?)\s*\(\s*Edificio\s+IULM\s*(\d)\s*,?\s*([^)]*)\)/i);
+      if (!m) continue;
+      const n = "IULM " + m[2], aula = m[1].trim(), piano = m[3].trim().replace(/^Piano terra$/i, "piano terra");
+      const e = out[n] || (out[n] = { aule: new Map(), incontri: 0 });
+      e.incontri++;
+      if (!e.aule.has(aula)) e.aule.set(aula, piano);
+    }
+    return out;
+  }
+  const CAL = edificiDalCalendario();
+  const MASTER = Object.keys(CAL).sort((a, b) => a.localeCompare(b, "it", { numeric: true }));
+  const ED = {
+    "IULM 1": { tratto: "L’edificio principale, in mattoni rosa, con il cortile porticato e le due fontane." },
+    "IULM 3": { tratto: "Al piano terra c’è l’IULM Restaurant, la mensa dell’università." },
+    "IULM 4": { tratto: "Davanti all’edificio c’è un ampio spazio aperto." },
+    "IULM 6": { tratto: "La torre arancione e l’edificio accanto: qui ci sono gli auditorium e la IULM Food Academy." },
+    "IULM 7": { tratto: "Di fronte all’uscita della metro Romolo. Ospita il centro di ricerca in neuromarketing e uno spazio di coworking per gli studenti.", gm: "Via Filargo 38, 20143 Milano", ind: "Via Filargo 38" }
+  };
+  // base degli edifici (punta della freccia) e punto di riferimento: l'IULM 1, edificio principale
+  const BASE = { "IULM 1": [41.5, 65], "IULM 2": [62.5, 80], "IULM 3": [24.3, 69], "IULM 4": [47, 88], "IULM 5": [82.5, 69], "IULM 6": [63.6, 65], "IULM 7": [13, 60] };
+  const RIF = "IULM 1", RIF_POS = [41.5, 69];
+  const freccia = n => `<span class="arrow" style="left:${BASE[n][0]}%;top:${BASE[n][1]}%" aria-hidden="true"><svg viewBox="0 0 40 64"><path d="M14 2h12v34h12L20 62 2 36h12Z" fill="#D7263D" stroke="#fff" stroke-width="3" stroke-linejoin="round"/></svg></span>`;
+  const SEGNO_RIF = `<svg viewBox="0 0 24 24" aria-hidden="true"><circle class="halo" cx="12" cy="12" r="12"/><circle cx="12" cy="12" r="7.5" fill="#1E9A4B" stroke="#fff" stroke-width="2.5"/><circle cx="12" cy="12" r="2.6" fill="#fff"/></svg>`;
+  const conRif = (evid, solo) => solo && evid[0] !== RIF;
+  const overlay = (evid, solo) => conRif(evid, solo) ? `<span class="refpin" style="left:${RIF_POS[0]}%;top:${RIF_POS[1]}%">${SEGNO_RIF}</span>` : "";
+  const legenda = (n, rif) => `<ul class="legenda"><li><svg class="lg-a" viewBox="0 0 40 64" aria-hidden="true"><path d="M14 2h12v34h12L20 62 2 36h12Z" fill="#D7263D"/></svg><span><b>${n}</b>${rif ? "" : ", l’edificio indicato"}</span></li>${rif ? `<li><svg class="lg-r" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="#1E9A4B"/><circle cx="12" cy="12" r="3" fill="#fff"/></svg><span><b>${RIF}</b>, edificio principale: il punto di riferimento</span></li>` : ""}</ul>`;
+  const mappa = (evid, solo) => {
+    const rif = conRif(evid, solo);
+    return `<button class="omap" data-zoom="${evid.join(",")}" aria-label="Ingrandisci la mappa del campus"><div class="ostage"><img src="campus_map.jpg" alt="Mappa ufficiale del campus IULM">${overlay(evid, solo)}${evid.map(freccia).join("")}</div>` +
+      `<span class="zoom">⤢ Ingrandisci</span></button>` +
+      (solo ? legenda(evid[0], rif) : `<ul class="legenda"><li><svg class="lg-a" viewBox="0 0 40 64" aria-hidden="true"><path d="M14 2h12v34h12L20 62 2 36h12Z" fill="#D7263D"/></svg><span>Edifici con lezioni del master · mappa ufficiale del campus IULM</span></li></ul>`);
+  };
+  const gmaps = n => "https://www.google.com/maps/dir/?api=1&travelmode=walking&destination=" + encodeURIComponent(ED[n] && ED[n].gm ? ED[n].gm : "Via Carlo Bo 1, 20143 Milano");
+
+  // Scheda dell'edificio: la mappa indica, il testo conferma
+  function scheda(n, aula, piano) {
+    const e = ED[n] || {}, c = CAL[n];
+    const elenco = aula ? [[aula, piano]] : c ? [...c.aule] : [];
+    const lezioni = elenco.length ? elenco.map(([a, pz]) => `<b>${a}</b>${pz ? " · " + pz : ""}`).join("<br>") : `<span class="tenue">Al momento nessuna lezione del master in questo edificio.</span>`;
+    apri(`<div class="ed-h"><span class="ey">Come arrivare</span><h2>${n}</h2></div>
+      <div>${mappa([n], true)}</div>
+      <dl class="facts">${e.tratto ? `<div><dt>Come riconoscerlo</dt><dd>${e.tratto}</dd></div>` : ""}<div><dt>Le tue lezioni qui</dt><dd>${lezioni}</dd></div></dl>
+      <a class="gmb" href="${gmaps(n)}" target="_blank" rel="noopener">${ico("pin")}<span>Indicazioni con Google Maps<small>Percorso a piedi dalla tua posizione attuale</small></span><span class="gm-a" aria-hidden="true">↗</span></a>
+      <div class="ed-foot"><span>${e.ind ? "Indirizzo" : "Campus"}: <b>${e.ind || "Via Carlo Bo 1"} · 20143 Milano</b></span><button class="lnk" data-campus>Tutti gli edifici ${ico("arrow-r")}</button></div>`);
+    try { history.replaceState(null, "", "#come-arrivare-" + n.toLowerCase().replace(" ", "-")); } catch (err) {}
+  }
+  function apriDa(pl, n) {
+    const aula = pl && pl.querySelector("b") ? pl.querySelector("b").textContent.trim() : "";
+    const m = pl ? pl.textContent.match(/(\d+°\s*piano|piano terra)/i) : null;
+    scheda(n, aula, m ? m[1].toLowerCase() : "");
+  }
+  function campus() {
+    const tuttiEd = ["IULM 1", "IULM 2", "IULM 3", "IULM 4", "IULM 5", "IULM 6", "IULM 7"];
+    const riga = n => {
+      const c = CAL[n];
+      const ds = c ? [...c.aule].map(([a, p]) => p ? `${a} · ${p}` : a).join(", ") : "Nessuna lezione in calendario";
+      return `<button class="${c ? "mine" : ""}" data-ed-apri="${n}"><span class="n">${n.split(" ")[1]}</span><span><span class="nm">${n}${c ? `<span class="cnt">${c.incontri} ${c.incontri === 1 ? "incontro" : "incontri"}</span>` : ""}</span><span class="ds">${ds}</span></span>${ico("arrow-r")}</button>`;
+    };
+    apri(`<div class="ed-h"><span class="ey">Guida al campus</span><h2>Come raggiungere gli edifici</h2><p>Le frecce rosse indicano gli edifici delle lezioni del master. Tocca un edificio per aprire la sua scheda.</p></div>
+      <div>${mappa(MASTER, false)}</div>
+      <div class="arrivo-campus"><dl class="facts"><div><dt>In metro</dt><dd><span class="mm">M2</span><b>Romolo</b>, linea verde. In alternativa <b>Famagosta</b>, la fermata successiva.</dd></div><div><dt>Indirizzo</dt><dd>Via Carlo Bo 1 · 20143 Milano<br><span class="tenue">L’IULM 7 è in Via Filargo 38, di fronte alla metro Romolo.</span></dd></div></dl></div>
+      <div class="edlist">${tuttiEd.map(riga).join("")}</div>`);
+  }
+  function zoom(list) {
+    const nomi = list.split(",").filter(Boolean);
+    const z = document.createElement("div");
+    z.className = "zoomer"; z.setAttribute("role", "dialog"); z.setAttribute("aria-modal", "true"); z.setAttribute("aria-label", "Mappa del campus");
+    z.innerHTML = `<div class="zbar"><span><b>Mappa del campus</b>${(nomi.length === 1 ? (nomi[0] === RIF ? "La freccia rossa indica l’IULM 1" : "In rosso l’" + nomi[0] + ", in verde l’IULM 1 come riferimento") : "Le frecce rosse indicano gli edifici delle lezioni").replace(/IULM /g, "IULM&nbsp;")}<br>Trascina per spostarti, usa + e − per lo zoom</span><button class="close-z">Chiudi</button></div>
+      <div class="zview"><div class="zwrap"><img src="campus_map.jpg" alt="Mappa ufficiale del campus IULM">${overlay(nomi, nomi.length === 1)}${nomi.map(freccia).join("")}</div>
+      <div class="zctl"><button class="zout" aria-label="Rimpicciolisci">−</button><button class="fit">Mappa intera</button><button class="zin" aria-label="Ingrandisci">+</button></div></div>`;
+    document.body.appendChild(z);
+    const view = z.querySelector(".zview"), wrap = z.querySelector(".zwrap"), img = z.querySelector("img");
+    let W = 0, H = 0, s = 1, x = 0, y = 0, fit = 1;
+    const vw = () => view.clientWidth, vh = () => view.clientHeight;
+    const clamp = () => {
+      const w = W * s, h = H * s;
+      x = w <= vw() ? (vw() - w) / 2 : Math.min(0, Math.max(vw() - w, x));
+      y = h <= vh() ? (vh() - h) / 2 : Math.min(0, Math.max(vh() - h, y));
+    };
+    const draw = () => { clamp(); wrap.style.transform = `translate(${x}px, ${y}px) scale(${s})`; };
+    const zoomAt = (ns, px, py) => { ns = Math.min(fit * 6, Math.max(fit, ns)); x = px - (px - x) * (ns / s); y = py - (py - y) * (ns / s); s = ns; draw(); };
+    const centro = () => [vw() / 2, vh() / 2];
+    const init = () => {
+      W = img.naturalWidth; H = img.naturalHeight; wrap.style.width = W + "px"; wrap.style.height = H + "px";
+      fit = Math.min(vw() / W, vh() / H);
+      const stretto = matchMedia("(max-width: 760px)").matches;
+      s = stretto ? Math.max(fit, (vh() - 70) / H) : fit;      // telefono: mappa alta come lo schermo
+      const cx = nomi.length ? nomi.reduce((a, n) => a + PIN[n][0], 0) / nomi.length / 100 * W : W / 2;
+      const cy = nomi.length ? nomi.reduce((a, n) => a + PIN[n][1], 0) / nomi.length / 100 * H : H / 2;
+      x = vw() / 2 - cx * s; y = vh() / 2 - cy * s; draw();
+    };
+    img.complete && img.naturalWidth ? init() : img.addEventListener("load", init);
+    addEventListener("resize", draw);
+    // trascinamento e pizzico
+    const pt = new Map(); let last = null;
+    const pos = ev => { const r = view.getBoundingClientRect(); return [ev.clientX - r.left, ev.clientY - r.top]; };
+    view.addEventListener("pointerdown", ev => {
+      if (ev.target.closest(".zctl")) return;
+      view.setPointerCapture(ev.pointerId); pt.set(ev.pointerId, pos(ev)); view.classList.add("drag"); last = null;
+    });
+    view.addEventListener("pointermove", ev => {
+      if (!pt.has(ev.pointerId)) return;
+      const prev = pt.get(ev.pointerId), cur = pos(ev); pt.set(ev.pointerId, cur);
+      if (pt.size === 1) { x += cur[0] - prev[0]; y += cur[1] - prev[1]; draw(); }
+      else if (pt.size === 2) {
+        const [a, b] = [...pt.values()], d = Math.hypot(a[0] - b[0], a[1] - b[1]), m = [(a[0] + b[0]) / 2, (a[1] + b[1]) / 2];
+        if (last) { x += m[0] - last.m[0]; y += m[1] - last.m[1]; zoomAt(s * d / last.d, m[0], m[1]); }
+        last = { d, m };
+      }
+    });
+    const fine = ev => { pt.delete(ev.pointerId); last = null; if (!pt.size) view.classList.remove("drag"); };
+    view.addEventListener("pointerup", fine); view.addEventListener("pointercancel", fine);
+    view.addEventListener("wheel", ev => { ev.preventDefault(); const [px, py] = pos(ev); zoomAt(s * Math.exp(-ev.deltaY * (ev.ctrlKey ? 0.01 : 0.0018)), px, py); }, { passive: false });
+    view.addEventListener("dblclick", ev => { const [px, py] = pos(ev); s > fit * 1.05 ? (s = fit, draw()) : zoomAt(fit * 2.5, px, py); });
+    z.querySelector(".zin").addEventListener("click", () => zoomAt(s * 1.5, ...centro()));
+    z.querySelector(".zout").addEventListener("click", () => zoomAt(s / 1.5, ...centro()));
+    z.querySelector(".fit").addEventListener("click", () => { s = fit; draw(); });
+    z.querySelector(".close-z").focus();
+    function k(ev) {
+      if (ev.key === "Escape") { ev.stopImmediatePropagation(); via(); }
+      else if (ev.key === "+" || ev.key === "=") zoomAt(s * 1.5, ...centro());
+      else if (ev.key === "-") zoomAt(s / 1.5, ...centro());
+      else if (ev.key.startsWith("Arrow")) { const d = 60; if (ev.key === "ArrowLeft") x += d; if (ev.key === "ArrowRight") x -= d; if (ev.key === "ArrowUp") y += d; if (ev.key === "ArrowDown") y -= d; draw(); }
+    }
+    const via = () => { z.remove(); document.removeEventListener("keydown", k, true); removeEventListener("resize", draw); };
+    document.addEventListener("keydown", k, true);
+    z.querySelector(".close-z").addEventListener("click", via);
+  }
+  // aule toccabili: segna i luoghi con l'edificio ogni volta che il calendario viene ridisegnato
+  // nella card «Ora» l'aula resta testo: lì l'azione è il pulsante «Come arrivare»
+  const segna = () => document.querySelectorAll(".place:not([data-ed])").forEach(p => {
+    if (p.closest("#next")) return;
+    const m = p.textContent.match(/IULM\s*(\d)/);
+    if (m) { p.dataset.ed = "IULM " + m[1]; p.setAttribute("role", "button"); p.tabIndex = 0; p.title = "Come arrivare"; p.setAttribute("aria-label", "Come arrivare: " + p.textContent.trim()); }
+  });
+  const pulsanti = () => {
+    const nx = document.querySelector("#next"), acts = nx && nx.querySelector(".next-actions"), pn = nx && nx.querySelector(".place"), mn = pn && pn.textContent.match(/IULM\s*(\d)/), p = mn && { dataset: { ed: "IULM " + mn[1] } };
+    const go = document.querySelector("#evid .top > .go[data-apri-ev]");
+    if (go) {
+      const l = tutte.find(x => x.evento && x.evento.id === go.dataset.apriEv);
+      const m = l && (l.luogo || "").match(/^(.*?)\s*\(\s*Edificio\s+IULM\s*(\d)\s*,?\s*([^)]*)\)/i);
+      if (m) {
+        const box = document.createElement("div"); box.className = "evid-acts";
+        go.replaceWith(box);
+        box.innerHTML = `<button class="go go-ed" data-ed-go="IULM ${m[2]}" data-aula="${esc(m[1].trim())}" data-piano="${esc(m[3].trim().toLowerCase())}">${ico("pin")}Come arrivare</button>`;
+        box.appendChild(go);
+      }
+    }
+    if (acts && p && !acts.querySelector(".go-ed")) { const v = acts.querySelector("[data-vai]"); (v || acts.firstElementChild).insertAdjacentHTML("afterend", `<button class="hbtn go-ed" data-ed-go="${p.dataset.ed}">${ico("pin")}Come arrivare</button>`); }
+  };
+  let lock = false;
+  new MutationObserver(() => { if (lock) return; lock = true; segna(); pulsanti(); lock = false; }).observe(document.body, { childList: true, subtree: true });
+  segna(); pulsanti();
+  const h = location.hash.match(/^#come-arrivare-iulm-(\d)$/); if (h) setTimeout(() => scheda("IULM " + h[1]), 300);
+  const hc = location.hash === "#campus"; if (hc) setTimeout(campus, 300);
+  // strumenti (guida al campus + calendario sul telefono): un blocco della griglia della testata.
+  // Telefono: Ora → percorso → strumenti affiancati. Computer: strumenti sotto la card «Ora», percorso a destra.
+  const path = document.querySelector(".path");
+  if (path) {
+    const box = document.createElement("div"); box.className = "strumenti";
+    path.after(box);
+    box.innerHTML = `<section class="campus-desk only-desk" aria-label="Guida al campus">
+      <div class="cd-top"><div><span class="eyebrow">Guida al campus</span><h3>Come arrivare</h3></div><button class="cd-map" data-campus>Tutti gli edifici ${ico("arrow-r")}</button></div>
+      <label class="sr" for="cd-ed">Scegli l’edificio e apri le indicazioni</label>
+      <div class="cd-sel">${ico("pin", "ico pin")}<select id="cd-ed"><option value="" selected disabled>Seleziona un edificio</option>${["IULM 1", "IULM 2", "IULM 3", "IULM 4", "IULM 5", "IULM 6", "IULM 7"].map(n => `<option value="${n}">${n}</option>`).join("")}</select>${ico("down", "ico chev")}</div>
+    </section>
+    <button class="campus-link only-phone" data-campus><span class="pinbox">${ico("pin")}</span><span><span class="t">Guida al campus</span><span class="s">Mappa ufficiale e indicazioni per raggiungere edifici e aule</span></span>${ico("arrow-r")}</button>
+    <button class="campus-link tool" id="sub-btn" hidden><span class="pinbox">${ico("cal")}</span><span><span class="t">Calendario sul telefono</span><span class="s">Tutte le lezioni nel calendario del telefono, sempre aggiornate</span></span>${ico("arrow-r")}</button>`;
+    const sel = box.querySelector("#cd-ed");
+    sel.addEventListener("change", () => { const n = sel.value; if (!n) return; if (!$("#panel").hidden) { chiudi(); setTimeout(() => scheda(n), 300); } else scheda(n); sel.selectedIndex = 0; });
+    verificaIcs();
+  }
+  // finché la novità della guida non è letta, le card della guida mostrano «Nuovo»
+  const novitaGuida = () => { const n = avvisiAttivi().find(a => a.id === "novita-guida-campus"); return n && !letti().has(n.id); };
+  const pillGuida = () => document.querySelectorAll(".campus-link[data-campus] .t, .campus-desk .eyebrow").forEach(t => {
+    const p = t.querySelector(".pill-nuovo"); if (novitaGuida()) { if (!p) t.insertAdjacentHTML("beforeend", ` <span class="pill-nuovo">Nuovo</span>`); } else if (p) p.remove();
+  });
+  pillGuida(); setInterval(pillGuida, 2000);
+  document.addEventListener("click", ev => {
+    const z = ev.target.closest("[data-zoom]"); if (z && !z.closest(".zoomer")) { ev.preventDefault(); zoom(z.dataset.zoom); return; }
+    const c = ev.target.closest("[data-campus]"); if (c) { ev.preventDefault(); ev.stopPropagation(); segnaLetti(["novita-guida-campus"]); aggiornaContatori(); pillGuida(); if (!$("#panel").hidden) { chiudi(); setTimeout(campus, 300); } else campus(); return; }
+    const a = ev.target.closest("[data-ed-apri]"); if (a) { ev.preventDefault(); if (a.dataset.letto) { segnaLetti([a.dataset.letto]); aggiornaContatori(); } const n = a.dataset.edApri; if ($("#panel").hidden) { scheda(n); return; } chiudi(); setTimeout(() => scheda(n), 300); return; }
+    if ((ev.target.id === "p-close" || ev.target.id === "velo") && location.hash.startsWith("#come-arrivare")) { try { history.replaceState(null, "", location.pathname + location.search); } catch (err) {} }
+    const g = ev.target.closest("[data-ed-go]"); if (g) { ev.preventDefault(); ev.stopPropagation(); if (g.dataset.aula) { scheda(g.dataset.edGo, g.dataset.aula, g.dataset.piano); return; } const pl = (g.closest(".slot") || g.closest("#next") || document).querySelector(".place"); apriDa(pl, g.dataset.edGo); return; }
+    const p = ev.target.closest(".place[data-ed]"); if (p) { ev.preventDefault(); ev.stopPropagation(); apriDa(p, p.dataset.ed); }
+  }, true);
+  document.addEventListener("keydown", ev => { const p = ev.target.closest && ev.target.closest(".place[data-ed]"); if (p && (ev.key === "Enter" || ev.key === " ")) { ev.preventDefault(); scheda(p.dataset.ed); } });
+})();
+</script>
+
+</body>
+</html>
